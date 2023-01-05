@@ -77,6 +77,7 @@
             // 
             // button5
             // 
+            this.button5.Enabled = false;
             this.button5.Location = new System.Drawing.Point(1152, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(144, 46);

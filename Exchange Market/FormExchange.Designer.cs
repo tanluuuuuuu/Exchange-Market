@@ -138,7 +138,7 @@
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(453, 203);
+            this.panel2.Location = new System.Drawing.Point(453, 106);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(569, 662);
             this.panel2.TabIndex = 2;
