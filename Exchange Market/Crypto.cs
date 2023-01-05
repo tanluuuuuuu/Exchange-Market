@@ -9,12 +9,22 @@ namespace Exchange_Market
     public class Crypto
     {
         public String name;
-        public double convert;
+        public String code_name;
 
-        public Crypto(String name = "", double convert = 1.0)
+        public double convert;
+        public List<double> prices;
+        public bool isFav;
+
+        public Crypto(String name = "", String code_name = "", double convert = 1.0, List<double> prices = null, bool isFav = false)
         {
+            var rand = new Random();
+
             this.name = name;
-            this.convert = convert;
+            this.code_name = code_name;
+            this.convert = rand.NextDouble() * 3;
+
+            this.prices = prices;
+            this.isFav = isFav;
         }
     }
 }
