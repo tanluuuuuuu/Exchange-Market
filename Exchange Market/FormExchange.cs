@@ -12,14 +12,25 @@ namespace Exchange_Market
 {
     public partial class FormExchange : Form
     {
+        List<Crypto> cryptos = new List<Crypto>();
+   
         public FormExchange()
         {
             InitializeComponent();
         }
 
+        private void FormExchange_Load(object sender, EventArgs e)
+        {
+            cryptos.Add(new Crypto("BNB", 1.5));
+            cryptos.Add(new Crypto("ETH", 1.25));
+            cryptos.Add(new Crypto("SOL", 1.3));
+            cryptos.Add(new Crypto("BUSD", 1.4));
+            cryptos.Add(new Crypto("ADA", 1.6));
+        }
+
         private void doSomething()
         {
-            int a = 0;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,5 +74,7 @@ namespace Exchange_Market
             this.Hide();
             form.ShowDialog();
         }
+
+
     }
 }
