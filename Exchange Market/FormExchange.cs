@@ -17,11 +17,6 @@ namespace Exchange_Market
             InitializeComponent();
         }
 
-        private void doSomething()
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             FormNews newsForm = new FormNews();
