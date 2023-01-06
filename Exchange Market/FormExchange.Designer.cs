@@ -152,6 +152,7 @@
             this.button7.TabIndex = 2;
             this.button7.Text = "Chuyển đổi";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // groupBox2
             // 
@@ -177,6 +178,12 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "BNB",
+            "ETH",
+            "SOL",
+            "BUSD",
+            "ADA"});
             this.comboBox2.Location = new System.Drawing.Point(318, 20);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(239, 39);
@@ -225,6 +232,12 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "BNB",
+            "ETH",
+            "SOL",
+            "BUSD",
+            "ADA"});
             this.comboBox1.Location = new System.Drawing.Point(318, 21);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(239, 39);
