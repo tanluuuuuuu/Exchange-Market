@@ -276,7 +276,7 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea6.Name = "ChartArea1";
+/*            chartArea6.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
             this.chart1.Legends.Add(legend6);
@@ -286,7 +286,7 @@
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series6.Legend = "Legend1";
             series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
+            this.chart1.Series.Add(series6);*/
             this.chart1.Size = new System.Drawing.Size(1064, 656);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";

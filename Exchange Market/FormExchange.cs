@@ -13,7 +13,7 @@ namespace Exchange_Market
     public partial class FormExchange : Form
     {
         List<Crypto> cryptos = new List<Crypto>();
-   
+
         public FormExchange()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace Exchange_Market
 
         private void doSomething()
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -168,7 +168,7 @@ namespace Exchange_Market
             {
                 if (comboBox2.Text == cryptos[3].name)
                 {
-                    x = (float)(float.Parse(textBox1.Text) * 1 );
+                    x = (float)(float.Parse(textBox1.Text) * 1);
                     textBox2.Text = x + "";
                 }
                 if (comboBox2.Text == cryptos[1].name)
@@ -222,5 +222,6 @@ namespace Exchange_Market
             }
 
 
+        }
     }
 }
