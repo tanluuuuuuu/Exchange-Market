@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Reflection;
 
 namespace Exchange_Market
 {
@@ -22,26 +23,10 @@ namespace Exchange_Market
 
         private void FormMarket_Load(object sender, EventArgs e)
         {
-            cryptos.Add(new Crypto("BNB", "BNB"));
-            cryptos.Add(new Crypto("ETH", "ETH"));
-
-            foreach (var crt in cryptos)
+            foreach (var crt in Globals.cryptos)
             {
                 addCryptosToFlowPanel(crt);
             }
-
-            Series series1 = new Series("Series 2");
-            series1.ChartType = SeriesChartType.Line;
-
-            // Add points to it.
-            series1.Points.AddXY(0, 2);
-            series1.Points.AddXY(1, 2);
-            series1.Points.AddXY(2, 12);
-            series1.Points.AddXY(3, 14);
-            series1.Points.AddXY(4, 17);
-            series1.Points.AddXY(5, 20);
-
-            chart1.Series.Add(series1);
         }
 
         private void addCryptosToFlowPanel(Crypto crt)
@@ -73,17 +58,50 @@ namespace Exchange_Market
             label3.Text = crt.convert.ToString("0.##");
 
             PictureBox pictureBox1 = new System.Windows.Forms.PictureBox();
+            pictureBox1.Location = new System.Drawing.Point(3, 24);
+            pictureBox1.Size = new System.Drawing.Size(50, 50);
+            pictureBox1.Image = crt.bit_image;
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 
             panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Cursor = System.Windows.Forms.Cursors.Hand;
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
             panel2.Location = new System.Drawing.Point(3, 3);
             panel2.Size = new System.Drawing.Size(285, 100);
-            
+            panel2.Click += (sender, e) => loadChart(sender, e, crt);
+
             flowLayoutPanel1.Controls.Add(panel2);
+        }
+
+        private void loadChart(object sender, EventArgs e, Crypto crt)
+        {
+            chart3.Series.Clear();
+
+            Series series_sell = new Series("Sell Price");
+            series_sell.ChartType = SeriesChartType.Line;
+            series_sell.BorderWidth = 3;
+
+            Series series_buy = new Series("Buy Price");
+            series_buy.ChartType = SeriesChartType.Line;
+            series_buy.BorderWidth = 3;
+
+            double max_sell = crt.sell_prices.Max(t => t);
+            double max_buy = crt.buy_prices.Max(t => t);
+
+            for (int i = 1; i <= 30; i++)
+            {
+                series_sell.Points.AddXY(i, crt.sell_prices[i - 1]);
+                series_buy.Points.AddXY(i, crt.buy_prices[i - 1]);
+            }
+
+            chart3.Series.Add(series_sell);
+            chart3.Series.Add(series_buy);
+            chart3.ChartAreas[0].AxisY.Maximum = Convert.ToInt32(Math.Max(max_sell, max_buy)) + 100;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

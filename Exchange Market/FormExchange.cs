@@ -21,11 +21,7 @@ namespace Exchange_Market
 
         private void FormExchange_Load(object sender, EventArgs e)
         {
-            cryptos.Add(new Crypto("BNB", "BNB", 1.5));
-            cryptos.Add(new Crypto("ETH", "ETH", 1.25));
-            cryptos.Add(new Crypto("SOL", "SOL", 1.3));
-            cryptos.Add(new Crypto("BUSD", "BUSD", 1.4));
-            cryptos.Add(new Crypto("ADA", "ADA", 1.6));
+
         }
 
         private void doSomething()

@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMarket));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -51,14 +54,14 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tab_Metaverse = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tab_Gaming = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -69,6 +72,10 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tab_DeFi = new System.Windows.Forms.TabPage();
+            this.tab_Innovation = new System.Windows.Forms.TabPage();
+            this.tab_All = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -80,16 +87,17 @@
             this.flowLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tab_Metaverse.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabPage4.SuspendLayout();
+            this.tab_Gaming.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -175,8 +183,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 69);
@@ -187,6 +195,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.chart3);
             this.tabPage1.Controls.Add(this.flowLayoutPanel1);
             this.tabPage1.Controls.Add(this.chart1);
             this.tabPage1.Location = new System.Drawing.Point(4, 38);
@@ -207,7 +216,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(398, 883);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(431, 883);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // panel2
@@ -219,6 +228,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(385, 100);
@@ -259,20 +269,20 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // chart1
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.chart1.Location = new System.Drawing.Point(440, 3);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(1064, 656);
+            this.chart1.Size = new System.Drawing.Size(1031, 886);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -308,8 +318,11 @@
             // tabControl2
             // 
             this.tabControl2.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tab_All);
+            this.tabControl2.Controls.Add(this.tab_Metaverse);
+            this.tabControl2.Controls.Add(this.tab_Gaming);
+            this.tabControl2.Controls.Add(this.tab_DeFi);
+            this.tabControl2.Controls.Add(this.tab_Innovation);
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Multiline = true;
             this.tabControl2.Name = "tabControl2";
@@ -317,16 +330,16 @@
             this.tabControl2.Size = new System.Drawing.Size(398, 723);
             this.tabControl2.TabIndex = 0;
             // 
-            // tabPage3
+            // tab_Metaverse
             // 
-            this.tabPage3.Controls.Add(this.flowLayoutPanel3);
-            this.tabPage3.Location = new System.Drawing.Point(37, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(357, 715);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tab_Metaverse.Controls.Add(this.flowLayoutPanel3);
+            this.tab_Metaverse.Location = new System.Drawing.Point(37, 4);
+            this.tab_Metaverse.Name = "tab_Metaverse";
+            this.tab_Metaverse.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Metaverse.Size = new System.Drawing.Size(357, 715);
+            this.tab_Metaverse.TabIndex = 0;
+            this.tab_Metaverse.Text = "Metaverse";
+            this.tab_Metaverse.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel3
             // 
@@ -391,16 +404,16 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // tabPage4
+            // tab_Gaming
             // 
-            this.tabPage4.Controls.Add(this.flowLayoutPanel4);
-            this.tabPage4.Location = new System.Drawing.Point(37, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(357, 715);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tab_Gaming.Controls.Add(this.flowLayoutPanel4);
+            this.tab_Gaming.Location = new System.Drawing.Point(37, 4);
+            this.tab_Gaming.Name = "tab_Gaming";
+            this.tab_Gaming.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Gaming.Size = new System.Drawing.Size(357, 715);
+            this.tab_Gaming.TabIndex = 1;
+            this.tab_Gaming.Text = "Gaming";
+            this.tab_Gaming.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel4
             // 
@@ -501,10 +514,10 @@
             this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
             this.chart2.Location = new System.Drawing.Point(0, 0);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
@@ -515,6 +528,47 @@
             this.chart2.Size = new System.Drawing.Size(1047, 586);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
+            // 
+            // chart3
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart3.Legends.Add(legend4);
+            this.chart3.Location = new System.Drawing.Point(440, 6);
+            this.chart3.Name = "chart3";
+            this.chart3.Size = new System.Drawing.Size(1026, 566);
+            this.chart3.TabIndex = 3;
+            this.chart3.Text = "chart3";
+            // 
+            // tab_DeFi
+            // 
+            this.tab_DeFi.Location = new System.Drawing.Point(37, 4);
+            this.tab_DeFi.Name = "tab_DeFi";
+            this.tab_DeFi.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_DeFi.Size = new System.Drawing.Size(357, 715);
+            this.tab_DeFi.TabIndex = 2;
+            this.tab_DeFi.Text = "DeFi";
+            this.tab_DeFi.UseVisualStyleBackColor = true;
+            // 
+            // tab_Innovation
+            // 
+            this.tab_Innovation.Location = new System.Drawing.Point(37, 4);
+            this.tab_Innovation.Name = "tab_Innovation";
+            this.tab_Innovation.Size = new System.Drawing.Size(357, 715);
+            this.tab_Innovation.TabIndex = 3;
+            this.tab_Innovation.Text = "Innovation";
+            this.tab_Innovation.UseVisualStyleBackColor = true;
+            // 
+            // tab_All
+            // 
+            this.tab_All.Location = new System.Drawing.Point(37, 4);
+            this.tab_All.Name = "tab_All";
+            this.tab_All.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_All.Size = new System.Drawing.Size(357, 715);
+            this.tab_All.TabIndex = 4;
+            this.tab_All.Text = "All";
+            this.tab_All.UseVisualStyleBackColor = true;
             // 
             // FormMarket
             // 
@@ -539,18 +593,19 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            this.tab_Metaverse.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tabPage4.ResumeLayout(false);
+            this.tab_Gaming.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,8 +634,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tab_Metaverse;
+        private System.Windows.Forms.TabPage tab_Gaming;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
@@ -595,5 +650,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.TabPage tab_DeFi;
+        private System.Windows.Forms.TabPage tab_Innovation;
+        private System.Windows.Forms.TabPage tab_All;
     }
 }
