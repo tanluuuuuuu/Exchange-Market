@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exchange_Market.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,18 +22,44 @@ namespace Exchange_Market
 
         private void btn_dangBai_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || richTextBox1.Text == "")
+            if (textBox3.Text == "" || richTextBox2.Text == "")
             {
                 MessageBox.Show("Không được để trống tên hiển thị và nội dung bài");
             }
 
-            Annoucement annoucement = new Annoucement(textBox1.Text, richTextBox1.Text);
+            Annoucement annoucement = new Annoucement(textBox3.Text, richTextBox2.Text);
             annoucements.Add(annoucement);
+            renderAnnouncements();
+            MessageBox.Show("OK");
         }
 
         private void renderAnnouncements()
         {
+            flowLayoutPanel1.Controls.Clear();
+            for(var i = 0; i < annoucements.Count(); i++)
+            {
+                GroupBox panel_NewsItem = new System.Windows.Forms.GroupBox();
 
+                Label textBox2 = new System.Windows.Forms.Label();
+                textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top)
+    | System.Windows.Forms.AnchorStyles.Left)
+    | System.Windows.Forms.AnchorStyles.Right)));
+                textBox2.Enabled = false;
+                textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                textBox2.Location = new System.Drawing.Point(4, 38);
+                Size size = TextRenderer.MeasureText(annoucements[i].content, textBox3.Font);
+                textBox2.Size = new System.Drawing.Size(175, size.Height + 10);
+                textBox2.Text = annoucements[i].content;
+
+                // panel_NewsItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+                panel_NewsItem.Controls.Add(textBox2);
+                panel_NewsItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                panel_NewsItem.Text = annoucements[i].name;
+                panel_NewsItem.Location = new System.Drawing.Point(3, 3);
+                panel_NewsItem.Size = new System.Drawing.Size(720, 59 + size.Height);
+
+                flowLayoutPanel1.Controls.Add(panel_NewsItem);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
