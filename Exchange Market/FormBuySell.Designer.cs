@@ -141,7 +141,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormBuySell";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormNFT";
+            this.Text = "FormBuySell";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

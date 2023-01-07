@@ -49,6 +49,11 @@
   <ItemGroup>
     <Compile Include="Annoucement.cs" />
     <Compile Include="Crypto.cs" />
+    <Compile Include="CryptoImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryptoImages.resx</DependentUpon>
+    </Compile>
     <Compile Include="FormExchange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +98,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CryptoImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CryptoImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormExchange.resx">
       <DependentUpon>FormExchange.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
