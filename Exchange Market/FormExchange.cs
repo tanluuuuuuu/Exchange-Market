@@ -75,6 +75,152 @@ namespace Exchange_Market
             form.ShowDialog();
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            float x;
+            Console.WriteLine(textBox1.Text);
+            Console.WriteLine(textBox2.Text);
+            if (comboBox1.Text == cryptos[0].name)
+            {
+                if (comboBox2.Text == cryptos[0].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * 1);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[1].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[1].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[2].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[2].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[3].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[3].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[4].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[4].convert);
+                    textBox2.Text = x + "";
+                }
+            }
+            if (comboBox1.Text == cryptos[1].name)
+            {
+                if (comboBox2.Text == cryptos[1].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * 1);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[0].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[0].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[2].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[2].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[3].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[3].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[4].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[4].convert);
+                    textBox2.Text = x + "";
+                }
+            }
+            if (comboBox1.Text == cryptos[2].name)
+            {
+                if (comboBox2.Text == cryptos[2].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * 1);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[1].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[1].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[0].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[0].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[3].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[3].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[4].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[4].convert);
+                    textBox2.Text = x + "";
+                }
+            }
+            if (comboBox1.Text == cryptos[3].name)
+            {
+                if (comboBox2.Text == cryptos[3].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * 1 );
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[1].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[1].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[2].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[2].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[0].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[0].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[4].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[4].convert);
+                    textBox2.Text = x + "";
+                }
+            }
+            if (comboBox1.Text == cryptos[4].name)
+            {
+                if (comboBox2.Text == cryptos[4].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * 1);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[1].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[1].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[2].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[2].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[3].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[3].convert);
+                    textBox2.Text = x + "";
+                }
+                if (comboBox2.Text == cryptos[0].name)
+                {
+                    x = (float)(float.Parse(textBox1.Text) * cryptos[0].convert);
+                    textBox2.Text = x + "";
+                }
+            }
+
 
     }
 }
