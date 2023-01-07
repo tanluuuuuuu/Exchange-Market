@@ -93,7 +93,7 @@
             this.button4.Size = new System.Drawing.Size(144, 46);
             this.button4.TabIndex = 3;
             this.button4.TabStop = false;
-            this.button4.Text = "NFT";
+            this.button4.Text = "Buy/Sell";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

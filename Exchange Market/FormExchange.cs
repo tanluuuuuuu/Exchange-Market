@@ -84,7 +84,7 @@ namespace Exchange_Market
             {
                 if (comboBox2.Text == cryptos[0].name)
                 {
-                    x = (float)(float.Parse(textBox1.Text) * cryptos[0].convert);
+                    x = (float)(float.Parse(textBox1.Text) * 1);
                     textBox2.Text = x + "";
                 }
                 if (comboBox2.Text == cryptos[1].name)
@@ -112,7 +112,7 @@ namespace Exchange_Market
             {
                 if (comboBox2.Text == cryptos[1].name)
                 {
-                    x = (float)(float.Parse(textBox1.Text) * cryptos[1].convert);
+                    x = (float)(float.Parse(textBox1.Text) * 1);
                     textBox2.Text = x + "";
                 }
                 if (comboBox2.Text == cryptos[0].name)
@@ -140,7 +140,7 @@ namespace Exchange_Market
             {
                 if (comboBox2.Text == cryptos[2].name)
                 {
-                    x = (float)(float.Parse(textBox1.Text) * cryptos[2].convert);
+                    x = (float)(float.Parse(textBox1.Text) * 1);
                     textBox2.Text = x + "";
                 }
                 if (comboBox2.Text == cryptos[1].name)
@@ -168,7 +168,7 @@ namespace Exchange_Market
             {
                 if (comboBox2.Text == cryptos[3].name)
                 {
-                    x = (float)(float.Parse(textBox1.Text) * cryptos[0].convert);
+                    x = (float)(float.Parse(textBox1.Text) * 1 );
                     textBox2.Text = x + "";
                 }
                 if (comboBox2.Text == cryptos[1].name)
@@ -196,7 +196,7 @@ namespace Exchange_Market
             {
                 if (comboBox2.Text == cryptos[4].name)
                 {
-                    x = (float)(float.Parse(textBox1.Text) * cryptos[4].convert);
+                    x = (float)(float.Parse(textBox1.Text) * 1);
                     textBox2.Text = x + "";
                 }
                 if (comboBox2.Text == cryptos[1].name)
