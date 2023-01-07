@@ -95,7 +95,7 @@
             this.button4.Size = new System.Drawing.Size(144, 46);
             this.button4.TabIndex = 3;
             this.button4.TabStop = false;
-            this.button4.Text = "Buy/Sell";
+            this.button4.Text = "Giao Dịch";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -106,7 +106,7 @@
             this.button3.Size = new System.Drawing.Size(144, 46);
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
-            this.button3.Text = "Giao dịch";
+            this.button3.Text = "Quy Đổi";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -132,14 +132,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bộ sưu tập hàng đầu";
             // 
-            // FormNFT
+            // FormBuySell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 1003);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "FormNFT";
+            this.Name = "FormBuySell";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNFT";
             this.panel1.ResumeLayout(false);

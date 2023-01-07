@@ -30,6 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -41,6 +42,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel_NewsItem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -74,6 +78,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1482, 69);
             this.panel1.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(702, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 46);
+            this.button2.TabIndex = 7;
+            this.button2.TabStop = false;
+            this.button2.Text = "Thị trường";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -115,7 +130,7 @@
             this.button4.Size = new System.Drawing.Size(144, 46);
             this.button4.TabIndex = 3;
             this.button4.TabStop = false;
-            this.button4.Text = "Buy/Sell";
+            this.button4.Text = "Giao Dịch";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -126,7 +141,7 @@
             this.button3.Size = new System.Drawing.Size(144, 46);
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
-            this.button3.Text = "Giao dịch";
+            this.button3.Text = "Quy Đổi\r\n";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
