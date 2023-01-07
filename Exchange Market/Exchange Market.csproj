@@ -145,8 +145,126 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\ABH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ACP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AFA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AKE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AKX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BIU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BPS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BRD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CBF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CDC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DJM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DNR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EJT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ESC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FRN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HGA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HLZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JAI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KGF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KOT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KPV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LBX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MBZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MCA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MGR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MQF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RAB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RJA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RNL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TJQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TKL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VPY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZJG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
