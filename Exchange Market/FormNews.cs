@@ -69,5 +69,12 @@ namespace Exchange_Market
             this.Hide();
             form.ShowDialog();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FormMarket form = new FormMarket();
+            this.Hide();
+            form.ShowDialog();
+        }
     }
 }
