@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Annoucement.cs" />
     <Compile Include="Crypto.cs" />
     <Compile Include="FormExchange.cs">
       <SubType>Form</SubType>
@@ -84,11 +85,11 @@
     <Compile Include="FormNews.Designer.cs">
       <DependentUpon>FormNews.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNFT.cs">
+    <Compile Include="FormBuySell.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormNFT.Designer.cs">
-      <DependentUpon>FormNFT.cs</DependentUpon>
+    <Compile Include="FormBuySell.Designer.cs">
+      <DependentUpon>FormBuySell.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,8 +111,8 @@
     <EmbeddedResource Include="FormNews.resx">
       <DependentUpon>FormNews.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNFT.resx">
-      <DependentUpon>FormNFT.cs</DependentUpon>
+    <EmbeddedResource Include="FormBuySell.resx">
+      <DependentUpon>FormBuySell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,9 +12,27 @@ namespace Exchange_Market
 {
     public partial class FormNews : Form
     {
+        List<Annoucement> annoucements = new List<Annoucement>();
+
         public FormNews()
         {
             InitializeComponent();
+        }
+
+        private void btn_dangBai_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || richTextBox1.Text == "")
+            {
+                MessageBox.Show("Không được để trống tên hiển thị và nội dung bài");
+            }
+
+            Annoucement annoucement = new Annoucement(textBox1.Text, richTextBox1.Text);
+            annoucements.Add(annoucement);
+        }
+
+        private void renderAnnouncements()
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -33,7 +51,7 @@ namespace Exchange_Market
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormNFT form = new FormNFT();
+            FormBuySell form = new FormBuySell();
             this.Hide();
             form.ShowDialog();
         }

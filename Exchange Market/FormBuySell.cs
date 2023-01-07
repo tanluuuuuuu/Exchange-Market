@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Exchange_Market
 {
-    public partial class FormNFT : Form
+    public partial class FormBuySell : Form
     {
-        public FormNFT()
+        public FormBuySell()
         {
             InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace Exchange_Market
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormNFT form = new FormNFT();
+            FormBuySell form = new FormBuySell();
             this.Hide();
             form.ShowDialog();
         }

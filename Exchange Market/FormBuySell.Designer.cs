@@ -1,6 +1,6 @@
 ﻿namespace Exchange_Market
 {
-    partial class FormNFT
+    partial class FormBuySell
     {
         /// <summary>
         /// Required designer variable.

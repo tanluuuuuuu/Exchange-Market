@@ -152,7 +152,7 @@
             this.button7.TabIndex = 2;
             this.button7.Text = "Chuyển đổi";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            //this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // groupBox2
             // 

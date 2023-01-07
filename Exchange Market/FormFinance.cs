@@ -40,7 +40,7 @@ namespace Exchange_Market
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormNFT form = new FormNFT();
+            FormBuySell form = new FormBuySell();
             this.Hide();
             form.ShowDialog();
         }
