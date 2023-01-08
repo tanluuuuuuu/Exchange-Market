@@ -19,10 +19,7 @@ namespace Exchange_Market
             InitializeComponent();
         }
 
-        private void FormExchange_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void doSomething()
         {
@@ -219,5 +216,7 @@ namespace Exchange_Market
 
 
         }
+
+        
     }
 }

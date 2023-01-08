@@ -252,7 +252,7 @@
             this.Name = "FormExchange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormExchange";
-            this.Load += new System.EventHandler(this.FormExchange_Load);
+            
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
