@@ -152,6 +152,7 @@
             this.button7.TabIndex = 2;
             this.button7.Text = "Chuyển đổi";
             this.button7.UseVisualStyleBackColor = true;
+            
             // 
             // groupBox2
             // 
@@ -252,7 +253,6 @@
             this.Name = "FormExchange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormExchange";
-            
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

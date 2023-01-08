@@ -63,5 +63,7 @@ namespace Exchange_Market
             else
                 textBox2.PasswordChar = (char)0;
         }
+
+       
     }
 }
