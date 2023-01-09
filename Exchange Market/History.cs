@@ -10,7 +10,7 @@ namespace Exchange_Market
     {
         public Crypto crypto;
         public double quantity;
-        public String type;
+        public String type; // "sell" "buy"
 
         public History(Crypto crypto, double quantity, String type)
         {

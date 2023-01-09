@@ -114,6 +114,5 @@ namespace Exchange_Market
             form.ShowDialog();
         }
 
-
     }
 }
