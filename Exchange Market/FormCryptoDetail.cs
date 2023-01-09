@@ -21,6 +21,16 @@ namespace Exchange_Market
         {
             InitializeComponent();
             MessageBox.Show(crt.name);
+            linkLabel1.Text = crt.name;
+            label1.Text = crt.code_name;
+            label2.Text = crt.convert.ToString("0.##");
+            pictureBox1.Image = crt.bit_image;
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
