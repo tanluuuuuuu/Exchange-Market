@@ -35,7 +35,7 @@ namespace Exchange_Market
 
             foreach (var line in lines)
             {
-                var words = line.Split(',');
+                var words = line.Trim().Split(',');
                 double convert = rand.NextDouble() * 3;
                 String type = crypto_type[rand.Next(crypto_type.Count())];
                 
@@ -60,7 +60,7 @@ namespace Exchange_Market
                 if (lines_user[i] == "")
                     break;
 
-                var accDetail = lines_user[i].Split(',');
+                var accDetail = lines_user[i].Trim().Split(',');
                 User user = new User(accDetail[0], accDetail[1], accDetail[2], Convert.ToDouble(accDetail[3]));
                 
                 String owned_cryptos = lines_user[i + 1];
@@ -77,12 +77,12 @@ namespace Exchange_Market
             }
         }
 
-        static void setUpActiveUser(String userName)
+        public static void setUpActiveUser(String userName)
         {
             string[] lines_user = System.IO.File.ReadAllLines(@".\user_data.txt");
             for (int i = 0; i < lines_user.Count(); i += 4)
             {
-                var accDetail = lines_user[i].Split(',');
+                var accDetail = lines_user[i].Trim().Split(',');
                 if (accDetail[1] == userName)
                 {
                     // Get user from list
@@ -104,7 +104,7 @@ namespace Exchange_Market
                     // Load additional history
                     // Format: Name_Quantity_Type(sell/buy)
                     // BTC_2.5_sell,ETH_2.5_buy
-                    String[] history = lines_user[i + 3].Split(',');
+                    String[] history = lines_user[i + 3].Trim().Split(',');
                     if (history[0] != "None")
                     {
                         foreach (String his in history)

@@ -38,11 +38,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.btn_Register);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.checkBox1);
@@ -79,7 +81,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(105, 177);
+            this.checkBox1.Location = new System.Drawing.Point(3, 177);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(130, 20);
             this.checkBox1.TabIndex = 5;
@@ -147,6 +149,18 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Mua, giao dịch và nắm giữ hơn 350 loại tiền mã hóa trên Vinance";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(238, 178);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Quên mật khẩu";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // FormLogin
             // 
             this.AcceptButton = this.btn_Login;
@@ -177,5 +191,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btn_Register;
+        private System.Windows.Forms.Label label5;
     }
 }
