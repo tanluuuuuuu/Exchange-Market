@@ -14,7 +14,7 @@ namespace Exchange_Market
 {
     public partial class FormMarket : Form
     {
-        List<Crypto> cryptos = new List<Crypto>();
+        Crypto currentSelect;
 
         public FormMarket()
         {
@@ -23,13 +23,38 @@ namespace Exchange_Market
 
         private void FormMarket_Load(object sender, EventArgs e)
         {
-            foreach (var crt in Globals.cryptos)
+            flPanel_All.Controls.Clear();
+            flPanel_Metaverse.Controls.Clear();
+            flPanel_Gaming.Controls.Clear();
+            flPanel_DeFi.Controls.Clear();
+            flPanel_Innovation.Controls.Clear();
+            flowLayoutPanel1.Controls.Clear();
+
+            foreach (var crt in Globals.Cryptos)
             {
-                addCryptosToFlowPanel(crt);
+                Panel panel = addCryptosToFlowPanel(crt);
+
+                flPanel_All.Controls.Add(panel);
+
+                panel = addCryptosToFlowPanel(crt);
+                if (crt.type == "Metaverse")
+                    flPanel_Metaverse.Controls.Add(panel);
+                else if (crt.type == "Gaming")
+                    flPanel_Gaming.Controls.Add(panel);
+                else if (crt.type == "DeFi")
+                    flPanel_DeFi.Controls.Add(panel);
+                else if (crt.type == "Innovation")
+                    flPanel_Innovation.Controls.Add(panel);
+
+                if (crt.isFav)
+                {
+                    panel = addCryptosToFlowPanel(crt);
+                    flowLayoutPanel1.Controls.Add(panel);
+                }
             }
         }
 
-        private void addCryptosToFlowPanel(Crypto crt)
+        private Panel addCryptosToFlowPanel(Crypto crt)
         {
             Panel panel2 = new System.Windows.Forms.Panel();
 
@@ -72,14 +97,16 @@ namespace Exchange_Market
             panel2.Controls.Add(pictureBox1);
             panel2.Location = new System.Drawing.Point(3, 3);
             panel2.Size = new System.Drawing.Size(285, 100);
-            panel2.Click += (sender, e) => loadChart(sender, e, crt);
+            panel2.Click += (sender, e) => onPanelClick(sender, e, crt);
 
-            flowLayoutPanel1.Controls.Add(panel2);
+            return panel2;
         }
 
-        private void loadChart(object sender, EventArgs e, Crypto crt)
+        private void onPanelClick(object sender, EventArgs e, Crypto crt)
         {
+            currentSelect = crt;
             chart3.Series.Clear();
+            chart_All.Series.Clear();
 
             Series series_sell = new Series("Sell Price");
             series_sell.ChartType = SeriesChartType.Line;
@@ -102,6 +129,9 @@ namespace Exchange_Market
             chart3.Series.Add(series_buy);
             chart3.ChartAreas[0].AxisY.Maximum = Convert.ToInt32(Math.Max(max_sell, max_buy)) + 100;
 
+            chart_All.Series.Add(series_sell);
+            chart_All.Series.Add(series_buy);
+            chart_All.ChartAreas[0].AxisY.Maximum = Convert.ToInt32(Math.Max(max_sell, max_buy)) + 100;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -144,6 +174,13 @@ namespace Exchange_Market
             FormLogin form = new FormLogin();
             this.Hide();
             form.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            currentSelect.isFav = true;
+
+            FormMarket_Load(sender, e);
         }
     }
 }

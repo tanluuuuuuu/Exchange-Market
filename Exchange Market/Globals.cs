@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace Exchange_Market
 {
-    static class Globals
+    public static class Globals
     {
         // global int
-        public static List<Crypto> cryptos = new List<Crypto>();
+        private static List<Crypto> cryptos = new List<Crypto>();
         public static List<String> crypto_type = new List<String> { "Metaverse", "Gaming", "DeFi", "Innovation" };
+
+        public static List<Crypto> Cryptos { get => cryptos; set => cryptos = value; }
 
         static Globals()
         {
@@ -43,7 +45,7 @@ namespace Exchange_Market
                 }
                 int index = name.FindIndex(a => a == words[1]);
                 Crypto crt = new Crypto(words[0], words[1], images[index], convert, sell_prices, buy_prices, type);
-                cryptos.Add(crt);
+                Cryptos.Add(crt);
             }
         }
     }

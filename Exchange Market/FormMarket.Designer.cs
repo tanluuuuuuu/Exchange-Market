@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMarket));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMarket));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -42,7 +42,23 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tab_All = new System.Windows.Forms.TabPage();
+            this.tab_Metaverse = new System.Windows.Forms.TabPage();
+            this.flPanel_Metaverse = new System.Windows.Forms.FlowLayoutPanel();
+            this.tab_Gaming = new System.Windows.Forms.TabPage();
+            this.flPanel_Gaming = new System.Windows.Forms.FlowLayoutPanel();
+            this.tab_DeFi = new System.Windows.Forms.TabPage();
+            this.tab_Innovation = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.chart_All = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,54 +66,53 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tab_Metaverse = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flPanel_All = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tab_Gaming = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tab_DeFi = new System.Windows.Forms.TabPage();
-            this.tab_Innovation = new System.Windows.Forms.TabPage();
-            this.tab_All = new System.Windows.Forms.TabPage();
+            this.flPanel_DeFi = new System.Windows.Forms.FlowLayoutPanel();
+            this.flPanel_Innovation = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tab_All.SuspendLayout();
             this.tab_Metaverse.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.flPanel_Metaverse.SuspendLayout();
+            this.tab_Gaming.SuspendLayout();
+            this.flPanel_Gaming.SuspendLayout();
+            this.tab_DeFi.SuspendLayout();
+            this.tab_Innovation.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_All)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.flPanel_All.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tab_Gaming.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -193,6 +208,177 @@
             this.tabControl1.Size = new System.Drawing.Size(1482, 934);
             this.tabControl1.TabIndex = 2;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.flowLayoutPanel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 38);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1474, 892);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Tất cả tiền mã hóa";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.panel3);
+            this.flowLayoutPanel2.Controls.Add(this.panel4);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1468, 886);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tabControl2);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(398, 878);
+            this.panel3.TabIndex = 0;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl2.Controls.Add(this.tab_All);
+            this.tabControl2.Controls.Add(this.tab_Metaverse);
+            this.tabControl2.Controls.Add(this.tab_Gaming);
+            this.tabControl2.Controls.Add(this.tab_DeFi);
+            this.tabControl2.Controls.Add(this.tab_Innovation);
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Multiline = true;
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(398, 723);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // tab_All
+            // 
+            this.tab_All.Controls.Add(this.flPanel_All);
+            this.tab_All.Location = new System.Drawing.Point(37, 4);
+            this.tab_All.Name = "tab_All";
+            this.tab_All.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_All.Size = new System.Drawing.Size(357, 715);
+            this.tab_All.TabIndex = 4;
+            this.tab_All.Text = "All";
+            this.tab_All.UseVisualStyleBackColor = true;
+            // 
+            // tab_Metaverse
+            // 
+            this.tab_Metaverse.Controls.Add(this.flPanel_Metaverse);
+            this.tab_Metaverse.Location = new System.Drawing.Point(37, 4);
+            this.tab_Metaverse.Name = "tab_Metaverse";
+            this.tab_Metaverse.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Metaverse.Size = new System.Drawing.Size(357, 715);
+            this.tab_Metaverse.TabIndex = 0;
+            this.tab_Metaverse.Text = "Metaverse";
+            this.tab_Metaverse.UseVisualStyleBackColor = true;
+            // 
+            // flPanel_Metaverse
+            // 
+            this.flPanel_Metaverse.AutoScroll = true;
+            this.flPanel_Metaverse.Controls.Add(this.flowLayoutPanel6);
+            this.flPanel_Metaverse.Controls.Add(this.panel5);
+            this.flPanel_Metaverse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flPanel_Metaverse.Location = new System.Drawing.Point(3, 3);
+            this.flPanel_Metaverse.Name = "flPanel_Metaverse";
+            this.flPanel_Metaverse.Size = new System.Drawing.Size(351, 709);
+            this.flPanel_Metaverse.TabIndex = 0;
+            // 
+            // tab_Gaming
+            // 
+            this.tab_Gaming.Controls.Add(this.flPanel_Gaming);
+            this.tab_Gaming.Location = new System.Drawing.Point(37, 4);
+            this.tab_Gaming.Name = "tab_Gaming";
+            this.tab_Gaming.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Gaming.Size = new System.Drawing.Size(357, 715);
+            this.tab_Gaming.TabIndex = 1;
+            this.tab_Gaming.Text = "Gaming";
+            this.tab_Gaming.UseVisualStyleBackColor = true;
+            // 
+            // flPanel_Gaming
+            // 
+            this.flPanel_Gaming.AutoScroll = true;
+            this.flPanel_Gaming.Controls.Add(this.panel6);
+            this.flPanel_Gaming.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flPanel_Gaming.Location = new System.Drawing.Point(3, 3);
+            this.flPanel_Gaming.Name = "flPanel_Gaming";
+            this.flPanel_Gaming.Size = new System.Drawing.Size(351, 709);
+            this.flPanel_Gaming.TabIndex = 0;
+            // 
+            // tab_DeFi
+            // 
+            this.tab_DeFi.Controls.Add(this.flPanel_DeFi);
+            this.tab_DeFi.Location = new System.Drawing.Point(37, 4);
+            this.tab_DeFi.Name = "tab_DeFi";
+            this.tab_DeFi.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_DeFi.Size = new System.Drawing.Size(357, 715);
+            this.tab_DeFi.TabIndex = 2;
+            this.tab_DeFi.Text = "DeFi";
+            this.tab_DeFi.UseVisualStyleBackColor = true;
+            // 
+            // tab_Innovation
+            // 
+            this.tab_Innovation.Controls.Add(this.flPanel_Innovation);
+            this.tab_Innovation.Location = new System.Drawing.Point(37, 4);
+            this.tab_Innovation.Name = "tab_Innovation";
+            this.tab_Innovation.Size = new System.Drawing.Size(357, 715);
+            this.tab_Innovation.TabIndex = 3;
+            this.tab_Innovation.Text = "Innovation";
+            this.tab_Innovation.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.button8);
+            this.panel4.Controls.Add(this.button7);
+            this.panel4.Controls.Add(this.chart_All);
+            this.panel4.Location = new System.Drawing.Point(407, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1056, 878);
+            this.panel4.TabIndex = 1;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(775, 666);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(131, 50);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Mua";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(912, 666);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(131, 50);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "Yêu thích";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // chart_All
+            // 
+            this.chart_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea3.Name = "ChartArea1";
+            this.chart_All.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart_All.Legends.Add(legend3);
+            this.chart_All.Location = new System.Drawing.Point(0, 0);
+            this.chart_All.Name = "chart_All";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart_All.Series.Add(series2);
+            this.chart_All.Size = new System.Drawing.Size(1047, 586);
+            this.chart_All.TabIndex = 0;
+            this.chart_All.Text = "chart2";
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.chart3);
@@ -205,6 +391,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách yêu thích";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // chart3
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart3.Legends.Add(legend4);
+            this.chart3.Location = new System.Drawing.Point(440, 6);
+            this.chart3.Name = "chart3";
+            this.chart3.Size = new System.Drawing.Size(1026, 566);
+            this.chart3.TabIndex = 3;
+            this.chart3.Text = "chart3";
             // 
             // flowLayoutPanel1
             // 
@@ -286,69 +484,23 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // tabPage2
+            // flPanel_All
             // 
-            this.tabPage2.Controls.Add(this.flowLayoutPanel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 38);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1474, 892);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tất cả tiền mã hóa";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.flPanel_All.AutoScroll = true;
+            this.flPanel_All.Controls.Add(this.panel7);
+            this.flPanel_All.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flPanel_All.Location = new System.Drawing.Point(3, 3);
+            this.flPanel_All.Name = "flPanel_All";
+            this.flPanel_All.Size = new System.Drawing.Size(351, 709);
+            this.flPanel_All.TabIndex = 0;
             // 
-            // flowLayoutPanel2
+            // flowLayoutPanel6
             // 
-            this.flowLayoutPanel2.Controls.Add(this.panel3);
-            this.flowLayoutPanel2.Controls.Add(this.panel4);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1468, 886);
-            this.flowLayoutPanel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tabControl2);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(398, 878);
-            this.panel3.TabIndex = 0;
-            // 
-            // tabControl2
-            // 
-            this.tabControl2.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControl2.Controls.Add(this.tab_All);
-            this.tabControl2.Controls.Add(this.tab_Metaverse);
-            this.tabControl2.Controls.Add(this.tab_Gaming);
-            this.tabControl2.Controls.Add(this.tab_DeFi);
-            this.tabControl2.Controls.Add(this.tab_Innovation);
-            this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Multiline = true;
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(398, 723);
-            this.tabControl2.TabIndex = 0;
-            // 
-            // tab_Metaverse
-            // 
-            this.tab_Metaverse.Controls.Add(this.flowLayoutPanel3);
-            this.tab_Metaverse.Location = new System.Drawing.Point(37, 4);
-            this.tab_Metaverse.Name = "tab_Metaverse";
-            this.tab_Metaverse.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Metaverse.Size = new System.Drawing.Size(357, 715);
-            this.tab_Metaverse.TabIndex = 0;
-            this.tab_Metaverse.Text = "Metaverse";
-            this.tab_Metaverse.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.panel5);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(351, 709);
-            this.flowLayoutPanel3.TabIndex = 0;
+            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(200, 0);
+            this.flowLayoutPanel6.TabIndex = 0;
             // 
             // panel5
             // 
@@ -358,10 +510,10 @@
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Location = new System.Drawing.Point(3, 9);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(336, 100);
-            this.panel5.TabIndex = 2;
+            this.panel5.TabIndex = 3;
             // 
             // label4
             // 
@@ -404,26 +556,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // tab_Gaming
-            // 
-            this.tab_Gaming.Controls.Add(this.flowLayoutPanel4);
-            this.tab_Gaming.Location = new System.Drawing.Point(37, 4);
-            this.tab_Gaming.Name = "tab_Gaming";
-            this.tab_Gaming.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Gaming.Size = new System.Drawing.Size(357, 715);
-            this.tab_Gaming.TabIndex = 1;
-            this.tab_Gaming.Text = "Gaming";
-            this.tab_Gaming.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.panel6);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(351, 709);
-            this.flowLayoutPanel4.TabIndex = 0;
-            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -435,7 +567,7 @@
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(336, 100);
-            this.panel6.TabIndex = 3;
+            this.panel6.TabIndex = 4;
             // 
             // label7
             // 
@@ -478,97 +610,77 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // panel4
+            // flPanel_DeFi
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.flPanel_DeFi.AutoScroll = true;
+            this.flPanel_DeFi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flPanel_DeFi.Location = new System.Drawing.Point(3, 3);
+            this.flPanel_DeFi.Name = "flPanel_DeFi";
+            this.flPanel_DeFi.Size = new System.Drawing.Size(351, 709);
+            this.flPanel_DeFi.TabIndex = 0;
+            // 
+            // flPanel_Innovation
+            // 
+            this.flPanel_Innovation.AutoScroll = true;
+            this.flPanel_Innovation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flPanel_Innovation.Location = new System.Drawing.Point(0, 0);
+            this.flPanel_Innovation.Name = "flPanel_Innovation";
+            this.flPanel_Innovation.Size = new System.Drawing.Size(357, 715);
+            this.flPanel_Innovation.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.pictureBox4);
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(336, 100);
+            this.panel7.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(63, 67);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 20);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "label10";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(64, 29);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 17);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "label11";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.button8);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.chart2);
-            this.panel4.Location = new System.Drawing.Point(407, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1056, 878);
-            this.panel4.TabIndex = 1;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(59, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Bitcoin";
             // 
-            // button8
+            // pictureBox4
             // 
-            this.button8.Location = new System.Drawing.Point(775, 666);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(131, 50);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Mua";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(912, 666);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(131, 50);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Yêu thích";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // chart2
-            // 
-            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
-            this.chart2.Location = new System.Drawing.Point(0, 0);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(1047, 586);
-            this.chart2.TabIndex = 0;
-            this.chart2.Text = "chart2";
-            // 
-            // chart3
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart3.Legends.Add(legend4);
-            this.chart3.Location = new System.Drawing.Point(440, 6);
-            this.chart3.Name = "chart3";
-            this.chart3.Size = new System.Drawing.Size(1026, 566);
-            this.chart3.TabIndex = 3;
-            this.chart3.Text = "chart3";
-            // 
-            // tab_DeFi
-            // 
-            this.tab_DeFi.Location = new System.Drawing.Point(37, 4);
-            this.tab_DeFi.Name = "tab_DeFi";
-            this.tab_DeFi.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DeFi.Size = new System.Drawing.Size(357, 715);
-            this.tab_DeFi.TabIndex = 2;
-            this.tab_DeFi.Text = "DeFi";
-            this.tab_DeFi.UseVisualStyleBackColor = true;
-            // 
-            // tab_Innovation
-            // 
-            this.tab_Innovation.Location = new System.Drawing.Point(37, 4);
-            this.tab_Innovation.Name = "tab_Innovation";
-            this.tab_Innovation.Size = new System.Drawing.Size(357, 715);
-            this.tab_Innovation.TabIndex = 3;
-            this.tab_Innovation.Text = "Innovation";
-            this.tab_Innovation.UseVisualStyleBackColor = true;
-            // 
-            // tab_All
-            // 
-            this.tab_All.Location = new System.Drawing.Point(37, 4);
-            this.tab_All.Name = "tab_All";
-            this.tab_All.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_All.Size = new System.Drawing.Size(357, 715);
-            this.tab_All.TabIndex = 4;
-            this.tab_All.Text = "All";
-            this.tab_All.UseVisualStyleBackColor = true;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 24);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // FormMarket
             // 
@@ -583,29 +695,36 @@
             this.Load += new System.EventHandler(this.FormMarket_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tab_All.ResumeLayout(false);
+            this.tab_Metaverse.ResumeLayout(false);
+            this.flPanel_Metaverse.ResumeLayout(false);
+            this.tab_Gaming.ResumeLayout(false);
+            this.flPanel_Gaming.ResumeLayout(false);
+            this.tab_DeFi.ResumeLayout(false);
+            this.tab_Innovation.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart_All)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tab_Metaverse.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flPanel_All.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tab_Gaming.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -632,27 +751,36 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_All;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tab_Metaverse;
         private System.Windows.Forms.TabPage tab_Gaming;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.FlowLayoutPanel flPanel_Metaverse;
+        private System.Windows.Forms.FlowLayoutPanel flPanel_Gaming;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.TabPage tab_DeFi;
         private System.Windows.Forms.TabPage tab_Innovation;
         private System.Windows.Forms.TabPage tab_All;
+        private System.Windows.Forms.FlowLayoutPanel flPanel_All;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.FlowLayoutPanel flPanel_DeFi;
+        private System.Windows.Forms.FlowLayoutPanel flPanel_Innovation;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
