@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Collections;
 
 namespace Exchange_Market
 {
     public partial class FormBuySell : Form
     {
-        Crypto currentSelect;
+        Crypto currentSelect = null;
         public FormBuySell()
         {
             InitializeComponent();
@@ -148,6 +149,45 @@ namespace Exchange_Market
             form.ShowDialog();
         }
 
+        private void Buy_Click(object sender, EventArgs e)
+        {
+            if (currentSelect == null)
+            {
+                MessageBox.Show("Chọn một đồng để mua");
+                return;
+            }
 
+            if (num_buy.Value <= 0)
+            {
+                MessageBox.Show("Nhập đúng số lượng để mua");
+                return;
+            }
+
+            if ((decimal.ToDouble(num_buy.Value) * currentSelect.buy_prices[29]) > Globals.ActiveUser.remain_money)
+            {
+                MessageBox.Show("Không đủ số dư, vui lòng nạp thêm");
+                return;
+            }
+
+            int index = Globals.ActiveUser.owned_crypto.FindIndex(a => a.crypto.code_name == currentSelect.code_name);
+            if (index == -1)
+            {
+                OwnCrypto t = new OwnCrypto(currentSelect, decimal.ToDouble(num_buy.Value));
+                Globals.ActiveUser.owned_crypto.Add(t);
+            }
+            else
+            {
+                Globals.ActiveUser.owned_crypto[index].quantity += decimal.ToDouble(num_buy.Value);
+            }
+            Globals.ActiveUser.remain_money -= (decimal.ToDouble(num_buy.Value) * currentSelect.buy_prices[29]);
+            Globals.updateUserData();
+            MessageBox.Show("Mua thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString());
+        }
+
+        private void num_buy_ValueChanged(object sender, EventArgs e)
+        {
+            if(currentSelect != null)
+                label11.Text = "Thành tiền: " + (decimal.ToDouble(num_buy.Value) * currentSelect.buy_prices[29]).ToString("0.##");
+        }
     }
 }

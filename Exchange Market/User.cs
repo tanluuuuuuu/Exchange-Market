@@ -13,16 +13,16 @@ namespace Exchange_Market
         public String password;
         public double balance;
         public double remain_money;
-        public List<Crypto> owned_crypto;
+        public List<OwnCrypto> owned_crypto;
         public List<Crypto> fav_crypto;
         public List<History> history;
 
         public User(String account_name = "", 
             String username = "",
             String password = "",
-            double balance = 0,
             double remain_money = 0,
-            List<Crypto> owned_crypto = null,
+            double balance = 0,
+            List<OwnCrypto> owned_crypto = null,
             List<Crypto> fav_crypto = null,
             List<History> history = null)
         {
@@ -32,7 +32,7 @@ namespace Exchange_Market
 
             if (owned_crypto == null)
             {
-                owned_crypto = new List<Crypto>();
+                owned_crypto = new List<OwnCrypto>();
             }
             this.owned_crypto = owned_crypto;
 

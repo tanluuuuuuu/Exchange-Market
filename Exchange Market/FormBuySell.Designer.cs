@@ -43,14 +43,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lb_moneySell = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.lb_moneyBuy = new System.Windows.Forms.Label();
+            this.btn_Buy = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.num_buy = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,15 +66,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lb_moneyBuy = new System.Windows.Forms.Label();
-            this.lb_moneySell = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_buy)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -218,6 +218,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bán";
             // 
+            // lb_moneySell
+            // 
+            this.lb_moneySell.AutoSize = true;
+            this.lb_moneySell.Location = new System.Drawing.Point(350, 67);
+            this.lb_moneySell.Name = "lb_moneySell";
+            this.lb_moneySell.Size = new System.Drawing.Size(0, 29);
+            this.lb_moneySell.TabIndex = 10;
+            // 
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(636, 59);
@@ -257,9 +265,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lb_moneyBuy);
-            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.btn_Buy);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.numericUpDown1);
+            this.groupBox3.Controls.Add(this.num_buy);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Location = new System.Drawing.Point(3, 398);
             this.groupBox3.Name = "groupBox3";
@@ -268,14 +276,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mua";
             // 
-            // button7
+            // lb_moneyBuy
             // 
-            this.button7.Location = new System.Drawing.Point(636, 55);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(148, 44);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Mua";
-            this.button7.UseVisualStyleBackColor = true;
+            this.lb_moneyBuy.AutoSize = true;
+            this.lb_moneyBuy.Location = new System.Drawing.Point(350, 63);
+            this.lb_moneyBuy.Name = "lb_moneyBuy";
+            this.lb_moneyBuy.Size = new System.Drawing.Size(0, 29);
+            this.lb_moneyBuy.TabIndex = 9;
+            // 
+            // btn_Buy
+            // 
+            this.btn_Buy.Location = new System.Drawing.Point(636, 55);
+            this.btn_Buy.Name = "btn_Buy";
+            this.btn_Buy.Size = new System.Drawing.Size(148, 44);
+            this.btn_Buy.TabIndex = 8;
+            this.btn_Buy.Text = "Mua";
+            this.btn_Buy.UseVisualStyleBackColor = true;
+            this.btn_Buy.Click += new System.EventHandler(this.Buy_Click);
             // 
             // label11
             // 
@@ -287,12 +304,13 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Thành tiền";
             // 
-            // numericUpDown1
+            // num_buy
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(97, 61);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown1.TabIndex = 5;
+            this.num_buy.Location = new System.Drawing.Point(97, 61);
+            this.num_buy.Name = "num_buy";
+            this.num_buy.Size = new System.Drawing.Size(120, 34);
+            this.num_buy.TabIndex = 5;
+            this.num_buy.ValueChanged += new System.EventHandler(this.num_buy_ValueChanged);
             // 
             // label9
             // 
@@ -441,22 +459,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lb_moneyBuy
-            // 
-            this.lb_moneyBuy.AutoSize = true;
-            this.lb_moneyBuy.Location = new System.Drawing.Point(350, 63);
-            this.lb_moneyBuy.Name = "lb_moneyBuy";
-            this.lb_moneyBuy.Size = new System.Drawing.Size(0, 29);
-            this.lb_moneyBuy.TabIndex = 9;
-            // 
-            // lb_moneySell
-            // 
-            this.lb_moneySell.AutoSize = true;
-            this.lb_moneySell.Location = new System.Drawing.Point(350, 67);
-            this.lb_moneySell.Name = "lb_moneySell";
-            this.lb_moneySell.Size = new System.Drawing.Size(0, 29);
-            this.lb_moneySell.TabIndex = 10;
-            // 
             // FormBuySell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -477,7 +479,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_buy)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -519,10 +521,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown num_buy;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_Buy;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label lb_moneyBuy;
         private System.Windows.Forms.Label lb_moneySell;

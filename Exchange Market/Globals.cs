@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -61,16 +62,19 @@ namespace Exchange_Market
                     break;
 
                 var accDetail = lines_user[i].Trim().Split(',');
-                User user = new User(accDetail[0], accDetail[1], accDetail[2], Convert.ToDouble(accDetail[3]));
+                User user = new User(accDetail[0], accDetail[1], accDetail[2], Convert.ToDouble(accDetail[3]), Convert.ToDouble(accDetail[4]));
                 
                 String owned_cryptos = lines_user[i + 1];
                 var owned_crypto_names = owned_cryptos.Split(',');
                 if (owned_crypto_names[0] != "None")
                 {
-                    foreach (var crt_code_name in owned_crypto_names)
+                    foreach (var crt_code_name_and_quantity in owned_crypto_names)
                     {
+                        String crt_code_name = crt_code_name_and_quantity.Split('_')[0];
+                        double quantity = Convert.ToDouble(crt_code_name_and_quantity.Split('_')[1]);
                         int index = cryptos.FindIndex(a => a.code_name == crt_code_name);
-                        user.owned_crypto.Add(cryptos[index]);
+                        OwnCrypto t = new OwnCrypto(cryptos[index], quantity);
+                        user.owned_crypto.Add(t);
                     }
                 }    
                 userList.Add(user);
@@ -116,6 +120,54 @@ namespace Exchange_Market
                         }
                     }
                 }
+            }
+        }
+
+        public static void updateUserData()
+        {
+            string[] arrLine = File.ReadAllLines(@".\user_data.txt");
+            for (int i = 0; i < arrLine.Count(); i += 4)
+            {
+                String username = arrLine[i].Trim().Split(',')[1];
+                if (username == activeUser.username)
+                {
+                    String line = activeUser.account_name + "," + activeUser.username + "," + activeUser.password + "," + activeUser.remain_money.ToString() + "," + activeUser.balance.ToString();
+                    arrLine[i] = line;
+
+                    List<String> list_line = new List<string>();
+                    foreach (var crt in activeUser.owned_crypto)
+                    {
+                        list_line.Add(crt.crypto.code_name + "_" + crt.quantity.ToString("0.##"));
+                    }
+                    line = String.Join(",", list_line.ToArray());
+                    if (activeUser.owned_crypto.Count == 0)
+                        arrLine[i + 1] = "None";
+                    else
+                        arrLine[i + 1] = line;
+
+                    list_line = new List<string>();
+                    foreach (var crt in activeUser.fav_crypto)
+                    {
+                        list_line.Add(crt.code_name);
+                    }
+                    line = String.Join(",", list_line.ToArray());
+                    if (activeUser.fav_crypto.Count == 0)
+                        arrLine[i + 2] = "None";
+                    else
+                        arrLine[i + 2] = line;
+
+                    list_line = new List<string>();
+                    foreach (var his in activeUser.history)
+                    {
+                        list_line.Add(his.crypto.code_name + "_" + his.quantity.ToString("0.##") + "_" + his.type);
+                    }
+                    line = String.Join(",", list_line.ToArray());
+                    if (activeUser.history.Count == 0)
+                        arrLine[i + 3] = "None";
+                    else
+                        arrLine[i + 3] = line;
+                }
+                File.WriteAllLines(@".\user_data.txt", arrLine);
             }
         }
     }

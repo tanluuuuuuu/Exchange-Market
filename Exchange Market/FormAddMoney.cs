@@ -163,7 +163,8 @@ namespace Exchange_Market
             }
             if (flag1 && flag2)
             {
-                Globals.ActiveUser.balance += Convert.ToDouble(numericUpDown1.Value);
+                Globals.ActiveUser.remain_money += Convert.ToDouble(numericUpDown1.Value);
+                Globals.updateUserData();
                 MessageBox.Show("Nạp tiền thành công");
                 this.Close();
             }
