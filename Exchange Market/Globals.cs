@@ -57,6 +57,9 @@ namespace Exchange_Market
             string[] lines_user = System.IO.File.ReadAllLines(@".\user_data.txt");
             for (int i = 0; i < lines_user.Count(); i += 4)
             {
+                if (lines_user[i] == "")
+                    break;
+
                 var accDetail = lines_user[i].Split(',');
                 User user = new User(accDetail[0], accDetail[1], accDetail[2], Convert.ToDouble(accDetail[3]));
                 
