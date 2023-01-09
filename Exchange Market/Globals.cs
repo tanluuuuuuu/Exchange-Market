@@ -46,19 +46,5 @@ namespace Exchange_Market
                 cryptos.Add(crt);
             }
         }
-
-        // global function
-        public static string HelloWorld()
-        {
-            return "Hello World";
-        }
-
-        // global int using get/set
-        static int _getsetcounter;
-        public static int getsetcounter
-        {
-            set { _getsetcounter = value; }
-            get { return _getsetcounter; }
-        }
     }
 }
