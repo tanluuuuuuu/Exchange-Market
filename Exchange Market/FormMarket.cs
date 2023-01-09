@@ -182,5 +182,11 @@ namespace Exchange_Market
 
             FormMarket_Load(sender, e);
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FormCryptoDetail form = new FormCryptoDetail(currentSelect);
+            form.ShowDialog();
+        }
     }
 }

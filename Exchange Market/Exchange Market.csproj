@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="Annoucement.cs" />
     <Compile Include="Crypto.cs" />
+    <Compile Include="FormCryptoDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCryptoDetail.Designer.cs">
+      <DependentUpon>FormCryptoDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="CryptoImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,6 +105,9 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCryptoDetail.resx">
+      <DependentUpon>FormCryptoDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CryptoImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CryptoImages.Designer.cs</LastGenOutput>
