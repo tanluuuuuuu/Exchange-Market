@@ -117,5 +117,10 @@ namespace Exchange_Market
             form.ShowDialog();
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FormHistory form = new FormHistory();
+            form.ShowDialog();
+        }
     }
 }

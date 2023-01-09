@@ -164,6 +164,7 @@
             this.button8.TabIndex = 5;
             this.button8.Text = "Lịch sử";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // groupBox2
             // 
