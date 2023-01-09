@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,6 +95,65 @@ namespace Exchange_Market
                 panel1.Controls.Add(textBox2);
             }
             
+        }
+
+        private void btn_submitRegister_Click(object sender, EventArgs e)
+        {
+
+            if (numericUpDown1.Value <= 0 && comboBox1.Text != "Ví điện tử MOMO" && comboBox1.Text != "Tài khoản ngân hàng")
+            {
+                MessageBox.Show("Vui lòng nhập lại số tiền và chọn phương thức thanh toán.");
+            }
+            else if (numericUpDown1.Value <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập số tiền lớn hơn 0.");
+            }
+            else if(comboBox1.Text != "Ví điện tử MOMO" && comboBox1.Text != "Tài khoản ngân hàng")
+            {
+                        MessageBox.Show("Hãy chọn phương thức thanh toán.");
+            }
+              
+            if(comboBox1.Text == "Ví điện tử MOMO")
+                foreach (var item in panel1.Controls)
+            {
+                if (item.GetType() == typeof(TextBox))
+                {
+                    TextBox tb = (TextBox)item;
+                     if(tb.Text == "")
+                        {
+                            MessageBox.Show("Vui lòng nhập số điện thoại.");
+                        }    
+
+                }
+                
+            }
+             else if (comboBox1.Text == "Tài khoản ngân hàng")
+                foreach (var item in panel1.Controls)
+                {
+                    if (item.GetType() == typeof(TextBox))
+                    {
+                        TextBox tb1 = (TextBox)item;
+                        if (tb1.Text == "")
+                        {
+                            MessageBox.Show("Hãy nhập số tài khoản hặc tên tài khoản.");
+                            
+                        }
+                        
+                       
+                    }
+                    else if (item.GetType() == typeof(ComboBox))
+                    {
+                        ComboBox cb = (ComboBox)item;
+                        if (cb.Text == "")
+                        {
+                            MessageBox.Show("Vui lòng chọn ngân hàng.");
+                        }    
+
+                    }
+                    
+                }
+
+
         }
     }
 }
