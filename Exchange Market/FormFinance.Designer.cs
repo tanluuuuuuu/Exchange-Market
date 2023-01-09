@@ -1,4 +1,6 @@
-﻿namespace Exchange_Market
+﻿using System.Windows.Forms;
+
+namespace Exchange_Market
 {
     partial class FormFinance
     {

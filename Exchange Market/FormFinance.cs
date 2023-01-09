@@ -119,8 +119,7 @@ namespace Exchange_Market
 
         private void button8_Click(object sender, EventArgs e)
         {
-            FormHistory form = new FormHistory();
-            form.ShowDialog();
+
         }
     }
 }

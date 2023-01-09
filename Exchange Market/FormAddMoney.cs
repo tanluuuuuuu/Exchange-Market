@@ -25,6 +25,7 @@ namespace Exchange_Market
             // the employee's name from the list.
             string selectedType = (string)comboBox1.SelectedItem;
             panel1.Controls.Clear();
+            
             if (selectedType == "Tài khoản ngân hàng")
             {
                 Label label4 = new Label();
@@ -92,6 +93,7 @@ namespace Exchange_Market
                 panel1.Controls.Add(label5);
                 panel1.Controls.Add(textBox2);
             }
+            
         }
     }
 }

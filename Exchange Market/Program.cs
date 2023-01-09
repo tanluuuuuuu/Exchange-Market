@@ -16,7 +16,7 @@ namespace Exchange_Market
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAddMoney());
+            Application.Run(new FormLogin());
         }
     }
 }
