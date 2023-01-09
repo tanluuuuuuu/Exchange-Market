@@ -121,5 +121,11 @@ namespace Exchange_Market
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FormAddMoney form = new FormAddMoney();
+            form.ShowDialog();
+        }
     }
 }

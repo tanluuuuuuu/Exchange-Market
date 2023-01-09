@@ -38,6 +38,7 @@ namespace Exchange_Market
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,7 +50,6 @@ namespace Exchange_Market
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -157,6 +157,16 @@ namespace Exchange_Market
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tài chính cá nhân";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(12, 313);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(619, 46);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Nạp tiền vào tài khoản";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -269,15 +279,6 @@ namespace Exchange_Market
             this.pictureBox1.Size = new System.Drawing.Size(194, 226);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(12, 313);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(619, 46);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Nạp tiền vào tài khoản";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // FormFinance
             // 

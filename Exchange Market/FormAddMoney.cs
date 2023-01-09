@@ -99,7 +99,7 @@ namespace Exchange_Market
 
         private void btn_submitRegister_Click(object sender, EventArgs e)
         {
-
+            bool flag1 = false;
             if (numericUpDown1.Value <= 0 && comboBox1.Text != "Ví điện tử MOMO" && comboBox1.Text != "Tài khoản ngân hàng")
             {
                 MessageBox.Show("Vui lòng nhập lại số tiền và chọn phương thức thanh toán.");
@@ -108,26 +108,35 @@ namespace Exchange_Market
             {
                 MessageBox.Show("Vui lòng nhập số tiền lớn hơn 0.");
             }
-            else if(comboBox1.Text != "Ví điện tử MOMO" && comboBox1.Text != "Tài khoản ngân hàng")
+            else if (comboBox1.Text != "Ví điện tử MOMO" && comboBox1.Text != "Tài khoản ngân hàng")
             {
-                        MessageBox.Show("Hãy chọn phương thức thanh toán.");
+                MessageBox.Show("Hãy chọn phương thức thanh toán.");
             }
-              
+            else
+                flag1 = true;
+
+            bool flag2 = false;
             if(comboBox1.Text == "Ví điện tử MOMO")
-                foreach (var item in panel1.Controls)
             {
-                if (item.GetType() == typeof(TextBox))
+                bool tflag2 = false;
+                foreach (var item in panel1.Controls)
                 {
-                    TextBox tb = (TextBox)item;
-                     if(tb.Text == "")
+                    if (item.GetType() == typeof(TextBox))
+                    {
+                        TextBox tb = (TextBox)item;
+                        if (tb.Text == "")
                         {
                             MessageBox.Show("Vui lòng nhập số điện thoại.");
-                        }    
-
+                            tflag2 = true;  
+                        }
+                    }
                 }
-                
+                if (!tflag2)
+                    flag2 = true;
             }
-             else if (comboBox1.Text == "Tài khoản ngân hàng")
+            else if (comboBox1.Text == "Tài khoản ngân hàng")
+            {
+                bool tflag2 = false;
                 foreach (var item in panel1.Controls)
                 {
                     if (item.GetType() == typeof(TextBox))
@@ -136,10 +145,8 @@ namespace Exchange_Market
                         if (tb1.Text == "")
                         {
                             MessageBox.Show("Hãy nhập số tài khoản hặc tên tài khoản.");
-                            
+                            tflag2 = true;
                         }
-                        
-                       
                     }
                     else if (item.GetType() == typeof(ComboBox))
                     {
@@ -147,13 +154,19 @@ namespace Exchange_Market
                         if (cb.Text == "")
                         {
                             MessageBox.Show("Vui lòng chọn ngân hàng.");
-                        }    
-
+                            tflag2 = true;
+                        }
                     }
-                    
                 }
-
-
+                if (!tflag2)
+                    flag2 = true;
+            }
+            if (flag1 && flag2)
+            {
+                Globals.ActiveUser.balance += Convert.ToDouble(numericUpDown1.Value);
+                MessageBox.Show("Nạp tiền thành công");
+                this.Close();
+            }
         }
     }
 }
