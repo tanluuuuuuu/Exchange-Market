@@ -64,6 +64,10 @@ namespace Exchange_Market
                 textBox2.PasswordChar = (char)0;
         }
 
-       
+        private void btn_Register_Click(object sender, EventArgs e)
+        {
+            FormRegister registerForm = new FormRegister();
+            registerForm.ShowDialog();
+        }
     }
 }

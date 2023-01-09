@@ -19,9 +19,16 @@ namespace Exchange_Market
         public String type;
         public bool isFav;
 
-        public Crypto(String name = "", String code_name = "", Bitmap bit_image = null, double convert = 1.0, 
-            List<double> sell_prices = null, List<double> buy_prices = null, 
-            String type = "", bool isFav = false)
+        public Crypto(
+            String name = "", 
+            String code_name = "", 
+            Bitmap bit_image = null, 
+            double convert = 1.0, 
+            List<double> sell_prices = null, 
+            List<double> buy_prices = null, 
+            String type = "", 
+            bool isFav = false
+            )
         {
             this.name = name;
             this.code_name = code_name;

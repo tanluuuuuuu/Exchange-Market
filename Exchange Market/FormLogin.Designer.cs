@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Register = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btn_Login = new System.Windows.Forms.Button();
@@ -41,15 +41,9 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(-28, -57);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 0;
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btn_Register);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.btn_Login);
@@ -59,8 +53,19 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(956, 201);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(350, 334);
+            this.panel2.Size = new System.Drawing.Size(350, 439);
             this.panel2.TabIndex = 1;
+            // 
+            // btn_Register
+            // 
+            this.btn_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Register.Location = new System.Drawing.Point(3, 337);
+            this.btn_Register.Name = "btn_Register";
+            this.btn_Register.Size = new System.Drawing.Size(344, 69);
+            this.btn_Register.TabIndex = 7;
+            this.btn_Register.Text = "Đăng ký";
+            this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // label4
             // 
@@ -150,7 +155,6 @@
             this.ClientSize = new System.Drawing.Size(1482, 1003);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.KeyPreview = true;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -163,8 +167,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
@@ -174,5 +176,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btn_Register;
     }
 }
