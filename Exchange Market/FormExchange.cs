@@ -13,13 +13,21 @@ namespace Exchange_Market
     public partial class FormExchange : Form
     {
         List<Crypto> cryptos = new List<Crypto>();
-
+        Crypto crt1 = null;
+        Crypto crt2 = null;
         public FormExchange()
         {
             InitializeComponent();
         }
 
-        
+        private void FormExchange_Load(object sender, EventArgs e)
+        {
+            foreach (var crypto in Globals.Cryptos)
+            {
+                comboBox1.Items.Add(crypto.code_name);
+                comboBox2.Items.Add(crypto.code_name);
+            }
+        }
 
         private void doSomething()
         {
@@ -68,8 +76,47 @@ namespace Exchange_Market
             form.ShowDialog();
         }
 
-        
+        private void button7_Click(object sender, EventArgs e)
+        {
+            double x;
+            Console.WriteLine(textBox1.Text); 
+            Console.WriteLine(textBox2.Text);
+            if (comboBox1.Text != comboBox2.Text)
+            {
+                x= (float)(float.Parse(textBox1.Text) * (crt1.buy_prices[29] / crt2.buy_prices[29]));
+                textBox2.Text = x + "";
+                textBox3.Text =  (float)(float.Parse(textBox1.Text) * crt1.buy_prices[29]) + " ";
+            }
+            else
+                
+                textBox2.Text = textBox1.Text;
+            textBox3.Text = (float)(float.Parse(textBox1.Text) * crt1.buy_prices[29]) + " ";
+        }
 
-        
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            foreach (var crypto in Globals.Cryptos)
+            {
+                if(crypto.code_name == (string)comboBox1.SelectedItem)
+                {
+                    crt1= crypto;
+                    break;
+                }
+                
+            }    
+        }
+
+        private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
+        {
+            foreach (var crypto in Globals.Cryptos)
+            {
+                if (crypto.code_name == (string)comboBox2.SelectedItem)
+                {
+                    crt2 = crypto;
+                    break;
+                }
+
+            }
+        }
     }
 }

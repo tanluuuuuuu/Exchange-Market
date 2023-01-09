@@ -45,6 +45,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -152,10 +154,12 @@
             this.button7.TabIndex = 2;
             this.button7.Text = "Chuyển đổi";
             this.button7.UseVisualStyleBackColor = true;
-            
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label2);
@@ -177,17 +181,13 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "BNB",
-            "ETH",
-            "SOL",
-            "BUSD",
-            "ADA"});
             this.comboBox2.Location = new System.Drawing.Point(318, 20);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(239, 39);
             this.comboBox2.TabIndex = 2;
+            this.comboBox2.SelectedValueChanged += new System.EventHandler(this.comboBox2_SelectedValueChanged);
             // 
             // label2
             // 
@@ -231,17 +231,72 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "KGF",
+            "ABH",
+            "HLZ",
+            "AKX",
+            "BPS",
+            "MCA",
+            "ACP",
+            "MLE",
+            "LBX",
+            "MBZ",
+            "TKL",
+            "INA",
+            "RAB",
+            "KOT",
+            "BRD",
+            "DNR",
+            "RJA",
+            "DJM",
+            "MQF",
+            "BOC",
+            "AKE",
+            "ZJG",
+            "EJT",
+            "MGR",
+            "RNL",
+            "YGO",
+            "BIU",
+            "FRN",
+            "VPY",
+            "TJQ",
+            "HGA",
+            "JAI",
+            "BOP",
+            "CDC",
+            "CBF",
+            "ESC",
+            "FIL",
+            "AID",
+            "KPV",
+            "AFA"});
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "BNB",
-            "ETH",
-            "SOL",
-            "BUSD",
-            "ADA"});
             this.comboBox1.Location = new System.Drawing.Point(318, 21);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(239, 39);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(6, 175);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(234, 38);
+            this.textBox3.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 25);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "$";
             // 
             // FormExchange
             // 
@@ -253,6 +308,7 @@
             this.Name = "FormExchange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormExchange";
+            this.Load += new System.EventHandler(this.FormExchange_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -282,5 +338,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
