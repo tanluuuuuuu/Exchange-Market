@@ -77,6 +77,7 @@
             this.btn_submitRegister.TabIndex = 10;
             this.btn_submitRegister.Text = "Nạp tiền";
             this.btn_submitRegister.UseVisualStyleBackColor = true;
+            this.btn_submitRegister.Click += new System.EventHandler(this.btn_submitRegister_Click);
             // 
             // label3
             // 
