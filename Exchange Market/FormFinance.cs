@@ -134,6 +134,7 @@ namespace Exchange_Market
 
         private void button6_Click(object sender, EventArgs e)
         {
+            Globals.deactivateUser();
             FormLogin form = new FormLogin();
             this.Hide();
             form.ShowDialog();
