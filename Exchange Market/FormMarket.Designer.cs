@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMarket));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -73,6 +73,7 @@
             this.tab_Innovation = new System.Windows.Forms.TabPage();
             this.flPanel_Innovation = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.chart_All = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -85,7 +86,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -138,7 +138,7 @@
             this.button1.Size = new System.Drawing.Size(144, 46);
             this.button1.TabIndex = 7;
             this.button1.TabStop = false;
-            this.button1.Text = "Bảng tin";
+            this.button1.Text = "Diễn đàn\r\n";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -540,6 +540,16 @@
             this.panel4.Size = new System.Drawing.Size(1056, 878);
             this.panel4.TabIndex = 1;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(588, 666);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(181, 50);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Xem chi tiết";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(775, 666);
@@ -564,17 +574,17 @@
             this.chart_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea5.Name = "ChartArea1";
-            this.chart_All.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart_All.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chart_All.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_All.Legends.Add(legend1);
             this.chart_All.Location = new System.Drawing.Point(0, 0);
             this.chart_All.Name = "chart_All";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart_All.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart_All.Series.Add(series1);
             this.chart_All.Size = new System.Drawing.Size(1047, 586);
             this.chart_All.TabIndex = 0;
             this.chart_All.Text = "chart2";
@@ -594,10 +604,10 @@
             // 
             // chart3
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart3.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart3.Legends.Add(legend2);
             this.chart3.Location = new System.Drawing.Point(440, 6);
             this.chart3.Name = "chart3";
             this.chart3.Size = new System.Drawing.Size(1026, 566);
@@ -683,16 +693,6 @@
             this.chart1.Size = new System.Drawing.Size(1031, 886);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(588, 666);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(181, 50);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Xem chi tiết";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // FormMarket
             // 
