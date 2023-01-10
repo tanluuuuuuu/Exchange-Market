@@ -56,9 +56,18 @@ namespace Exchange_Market
                 panel_NewsItem.Text = Globals.Chat[i].name;
                 panel_NewsItem.Location = new System.Drawing.Point(3, 3);
                 panel_NewsItem.Size = new System.Drawing.Size(700, 59 + size.Height);
+                panel_NewsItem.Click += (sender, e) => onPanelClick(sender, e, Globals.Chat[i].name);
 
                 flowLayoutPanel1.Controls.Add(panel_NewsItem);
             }
+        }
+
+
+        private void onPanelClick(object sender, EventArgs e, String username)
+        {
+            int index = Globals.UserList.FindIndex(q => q.account_name == username);
+            FormProfile form = new FormProfile(Globals.UserList[index]);
+            form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -67,6 +76,7 @@ namespace Exchange_Market
             this.Hide();
             form.ShowDialog();
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
