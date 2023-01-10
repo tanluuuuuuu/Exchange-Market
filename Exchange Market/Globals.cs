@@ -61,9 +61,6 @@ namespace Exchange_Market
             string[] lines_user = System.IO.File.ReadAllLines(@".\user_data.txt");
             for (int i = 0; i < lines_user.Count(); i += 4)
             {
-                if (lines_user[i] == "")
-                    break;
-
                 var accDetail = lines_user[i].Trim().Split('\t');
                 User user = new User(accDetail[0], accDetail[1], accDetail[2], Convert.ToDouble(accDetail[3]), Convert.ToDouble(accDetail[4]));
                 
@@ -87,6 +84,8 @@ namespace Exchange_Market
             string[] lines_chat = System.IO.File.ReadAllLines(@".\chat.txt");
             foreach(var line in lines_chat)
             {
+                if (line == "")
+                    break;
                 String userName = line.Trim().Split('\t')[0];
                 String content = line.Trim().Split('\t')[1];
                 DateTime date = DateTime.Parse(line.Trim().Split('\t')[2]);

@@ -27,9 +27,9 @@ namespace Exchange_Market
 
             Annoucement annoucement = new Annoucement(Globals.ActiveUser.account_name, richTextBox2.Text);
             Globals.Chat.Add(annoucement);
+            Globals.updateChatData();
             renderAnnouncements();
             richTextBox2.Text = "";
-            Globals.updateChatData();
         }
 
         private void renderAnnouncements()
