@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -75,6 +75,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.check_fav = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -321,6 +322,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.check_fav);
             this.groupBox2.Controls.Add(this.btn_Filter);
             this.groupBox2.Controls.Add(this.numMaxBuy);
             this.groupBox2.Controls.Add(this.label14);
@@ -345,9 +347,9 @@
             // 
             // btn_Filter
             // 
-            this.btn_Filter.Location = new System.Drawing.Point(6, 326);
+            this.btn_Filter.Location = new System.Drawing.Point(135, 326);
             this.btn_Filter.Name = "btn_Filter";
-            this.btn_Filter.Size = new System.Drawing.Size(355, 47);
+            this.btn_Filter.Size = new System.Drawing.Size(226, 47);
             this.btn_Filter.TabIndex = 18;
             this.btn_Filter.Text = "Lọc";
             this.btn_Filter.UseVisualStyleBackColor = true;
@@ -506,16 +508,16 @@
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(376, 0);
             this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(701, 389);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -585,6 +587,17 @@
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // check_fav
+            // 
+            this.check_fav.AutoSize = true;
+            this.check_fav.Location = new System.Drawing.Point(6, 334);
+            this.check_fav.Name = "check_fav";
+            this.check_fav.Size = new System.Drawing.Size(98, 33);
+            this.check_fav.TabIndex = 19;
+            this.check_fav.Text = "is Fav";
+            this.check_fav.UseVisualStyleBackColor = true;
+            this.check_fav.CheckedChanged += new System.EventHandler(this.check_fav_CheckedChanged);
             // 
             // FormBuySell
             // 
@@ -667,5 +680,6 @@
         private System.Windows.Forms.NumericUpDown numMinBuy;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btn_Filter;
+        private System.Windows.Forms.CheckBox check_fav;
     }
 }

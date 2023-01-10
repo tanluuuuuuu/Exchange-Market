@@ -247,7 +247,8 @@ namespace Exchange_Market
             foreach (var crt in Globals.Cryptos)
             {
                 bool flg_name = false, flg_code_name = false, flg_type = false,
-                    flg_minSell = false, flg_maxSell = false, flg_minBuy = false, flg_maxBuy = false;
+                    flg_minSell = false, flg_maxSell = false, flg_minBuy = false, flg_maxBuy = false,
+                    flg_fav = false ;
                 if (tb_name.Text != "")
                 {
                     if (crt.name.ToLower().Contains(tb_name.Text.ToLower()))
@@ -302,14 +303,28 @@ namespace Exchange_Market
                     flg_maxSell = true;
                 }
 
+                if (check_fav.Checked)
+                {
+                    if (crt.isFav)
+                        flg_fav = true;
+                }
+                else
+                {
+                    flg_fav = true;
+                }
+
                 if (flg_name && flg_code_name && flg_type &&
-                    flg_minSell &&flg_maxSell && flg_minBuy && flg_maxBuy)
+                    flg_minSell &&flg_maxSell && flg_minBuy && flg_maxBuy && flg_fav)
                 {
                     Panel panel = addCryptosToFlowPanel(crt);
                     flowLayoutPanel1.Controls.Add(panel);
                 }
-                
             }
+        }
+
+        private void check_fav_CheckedChanged(object sender, EventArgs e)
+        {
+            btn_Filter_Click(sender, e);
         }
     }
 }
