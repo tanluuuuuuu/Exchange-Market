@@ -16,6 +16,7 @@ namespace Exchange_Market
 {
     public partial class FormBuySell : Form
     {
+        
         Crypto currentSelect = null;
         public FormBuySell()
         {

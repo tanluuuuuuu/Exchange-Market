@@ -156,6 +156,11 @@ namespace Exchange_Market
             }
         }
 
+        public static void deactivateUser()
+        {
+            Globals.activeUser = null;
+        }
+
         public static void updateUserData()
         {
             string[] arrLine = File.ReadAllLines(@".\user_data.txt");
