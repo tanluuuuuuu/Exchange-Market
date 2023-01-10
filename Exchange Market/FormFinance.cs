@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,8 @@ namespace Exchange_Market
         private void FormFinance_Load(object sender, EventArgs e)
         {
             lb_accountName.Text = "Tên hiển thị: " + Globals.ActiveUser.account_name;
-            lb_remain.Text = "Số dư: " + Globals.ActiveUser.remain_money.ToString();
-            lb_allMoney.Text = "Tài sản ròng: " + Globals.ActiveUser.balance.ToString();
+            lb_remain.Text = "Số dư: " + Globals.ActiveUser.remain_money.ToString("C5", CultureInfo.CurrentCulture);
+            lb_allMoney.Text = "Tài sản ròng: " + Globals.ActiveUser.balance.ToString("C5", CultureInfo.CurrentCulture);
 
             flowLayoutPanel1.Controls.Clear();
             foreach(var crt in Globals.ActiveUser.owned_crypto)
@@ -49,7 +50,7 @@ namespace Exchange_Market
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label2.Location = new System.Drawing.Point(124, 67);
             label2.Size = new System.Drawing.Size(53, 20);
-            label2.Text = "Giá trị: " + (crt.crypto.buy_prices[29] * crt.quantity).ToString("0.##");
+            label2.Text = "Giá trị: " + (crt.crypto.buy_prices[29] * crt.quantity).ToString("C5", CultureInfo.CurrentCulture);
 
             Label label11 = new System.Windows.Forms.Label();
             label11.AutoSize = true;
@@ -64,7 +65,7 @@ namespace Exchange_Market
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.Location = new System.Drawing.Point(124, 26);
             label1.Size = new System.Drawing.Size(53, 20);
-            label1.Text = "Số lượng: " + crt.quantity.ToString();
+            label1.Text = "Số lượng: " + crt.quantity.ToString("C5", CultureInfo.CurrentCulture);
 
             Label label12 = new System.Windows.Forms.Label();
             label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
