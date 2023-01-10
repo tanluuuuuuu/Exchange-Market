@@ -131,7 +131,7 @@ namespace Exchange_Market
                 String username = arrLine[i].Trim().Split(',')[1];
                 if (username == activeUser.username)
                 {
-                    String line = activeUser.account_name + "," + activeUser.username + "," + activeUser.password + "," + activeUser.remain_money.ToString() + "," + activeUser.balance.ToString();
+                    String line = activeUser.account_name + "," + activeUser.username + "," + activeUser.password + "," + activeUser.remain_money.ToString().Replace(',', '.') + "," + activeUser.balance.ToString().Replace(',', '.');
                     arrLine[i] = line;
 
                     List<String> list_line = new List<string>();

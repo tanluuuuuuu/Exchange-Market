@@ -180,6 +180,8 @@ namespace Exchange_Market
                 Globals.ActiveUser.owned_crypto[index].quantity += decimal.ToDouble(num_buy.Value);
             }
             Globals.ActiveUser.remain_money -= (decimal.ToDouble(num_buy.Value) * currentSelect.buy_prices[29]);
+            History his = new History(currentSelect, decimal.ToDouble(num_buy.Value), "buy");
+            Globals.ActiveUser.history.Add(his);
             Globals.updateUserData();
             MessageBox.Show("Mua thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString());
         }
@@ -188,6 +190,45 @@ namespace Exchange_Market
         {
             if(currentSelect != null)
                 label11.Text = "Thành tiền: " + (decimal.ToDouble(num_buy.Value) * currentSelect.buy_prices[29]).ToString("0.##");
+        }
+
+        private void sell_Click(object sender, EventArgs e)
+        {
+            if (currentSelect == null)
+            {
+                MessageBox.Show("Chọn một đồng để bán");
+                return;
+            }
+
+            if (num_sell.Value <= 0)
+            {
+                MessageBox.Show("Nhập đúng số lượng để bán");
+                return;
+            }
+
+            int index = Globals.ActiveUser.owned_crypto.FindIndex(a => a.crypto.code_name == currentSelect.code_name);
+            if (index == -1)
+            {
+                MessageBox.Show("Bạn cần sỡ hữu coin này mới có thể bán");
+                return;
+            }
+            else
+            {
+                if (Globals.ActiveUser.owned_crypto[index].quantity < decimal.ToDouble(num_sell.Value))
+                {
+                    MessageBox.Show("Số coin cần bán nhiều hơn số coin sở hữu");
+                    return;
+                }
+                else
+                {
+                    Globals.ActiveUser.owned_crypto[index].quantity -= decimal.ToDouble(num_sell.Value);
+                    Globals.ActiveUser.remain_money += (decimal.ToDouble(num_sell.Value) * currentSelect.buy_prices[29]);
+                    History his = new History(currentSelect, decimal.ToDouble(num_sell.Value), "sell");
+                    Globals.ActiveUser.history.Add(his);
+                    Globals.updateUserData();
+                    MessageBox.Show("Bán thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString());
+                }
+            }
         }
     }
 }

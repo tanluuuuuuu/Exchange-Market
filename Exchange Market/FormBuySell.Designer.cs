@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lb_moneySell = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_Sell = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.num_sell = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lb_moneyBuy = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_sell)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_buy)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -207,9 +207,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.lb_moneySell);
-            this.groupBox4.Controls.Add(this.button8);
+            this.groupBox4.Controls.Add(this.btn_Sell);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.numericUpDown2);
+            this.groupBox4.Controls.Add(this.num_sell);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Location = new System.Drawing.Point(3, 552);
             this.groupBox4.Name = "groupBox4";
@@ -226,14 +226,15 @@
             this.lb_moneySell.Size = new System.Drawing.Size(0, 29);
             this.lb_moneySell.TabIndex = 10;
             // 
-            // button8
+            // btn_Sell
             // 
-            this.button8.Location = new System.Drawing.Point(636, 59);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(148, 44);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Bán";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_Sell.Location = new System.Drawing.Point(636, 59);
+            this.btn_Sell.Name = "btn_Sell";
+            this.btn_Sell.Size = new System.Drawing.Size(148, 44);
+            this.btn_Sell.TabIndex = 9;
+            this.btn_Sell.Text = "Bán";
+            this.btn_Sell.UseVisualStyleBackColor = true;
+            this.btn_Sell.Click += new System.EventHandler(this.sell_Click);
             // 
             // label12
             // 
@@ -245,12 +246,12 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Thành tiền";
             // 
-            // numericUpDown2
+            // num_sell
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(97, 64);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown2.TabIndex = 6;
+            this.num_sell.Location = new System.Drawing.Point(97, 64);
+            this.num_sell.Name = "num_sell";
+            this.num_sell.Size = new System.Drawing.Size(120, 34);
+            this.num_sell.TabIndex = 6;
             // 
             // label10
             // 
@@ -379,16 +380,16 @@
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(376, 0);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(701, 389);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -476,7 +477,7 @@
             this.panel3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_sell)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_buy)).EndInit();
@@ -520,12 +521,12 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown num_sell;
         private System.Windows.Forms.NumericUpDown num_buy;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btn_Buy;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_Sell;
         private System.Windows.Forms.Label lb_moneyBuy;
         private System.Windows.Forms.Label lb_moneySell;
     }
