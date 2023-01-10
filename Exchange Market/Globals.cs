@@ -63,7 +63,7 @@ namespace Exchange_Market
 
             // Load user
             string[] lines_user = System.IO.File.ReadAllLines(@".\user_data.txt");
-            for (int i = 0; i < lines_user.Count(); i += 4)
+            for (int i = 0; i < lines_user.Count(); i += 6)
             {
                 var accDetail = lines_user[i].Trim().Split('\t');
                 User user = new User(accDetail[0], accDetail[1], accDetail[2], Convert.ToDouble(accDetail[3]), Convert.ToDouble(accDetail[4]));
@@ -124,13 +124,13 @@ namespace Exchange_Market
         public static void setUpActiveUser(String userName)
         {
             string[] lines_user = System.IO.File.ReadAllLines(@".\user_data.txt");
-            for (int i = 0; i < lines_user.Count(); i += 4)
+            for (int i = 0; i < lines_user.Count(); i += 6)
             {
                 var accDetail = lines_user[i].Trim().Split('\t');
                 if (accDetail[1] == userName)
                 {
                     // Get user from list
-                    activeUser = userList[i / 4];
+                    activeUser = userList[i / 6];
 
                     // Load additional fav crypto
                     // BTC,ETH
@@ -159,6 +159,26 @@ namespace Exchange_Market
                             activeUser.history.Add(his_object);
                         }
                     }
+
+                    // Load add money history
+                    String[] history_add = lines_user[i + 4].Trim().Split('\t');
+                    if (history_add[0] != "None")
+                    {
+                        foreach (String his in history_add)
+                        {
+                            activeUser.history_addMoney.Add(Convert.ToDouble(his));
+                        }
+                    }
+
+                    // Load get money history
+                    String[] history_get = lines_user[i + 5].Trim().Split('\t');
+                    if (history_get[0] != "None")
+                    {
+                        foreach (String his in history_get)
+                        {
+                            activeUser.history_getMoney.Add(Convert.ToDouble(his));
+                        }
+                    }
                 }
             }
         }
@@ -171,7 +191,7 @@ namespace Exchange_Market
         public static void updateUserData()
         {
             string[] arrLine = File.ReadAllLines(@".\user_data.txt");
-            for (int i = 0; i < arrLine.Count(); i += 4)
+            for (int i = 0; i < arrLine.Count(); i += 6)
             {
                 String username = arrLine[i].Trim().Split('\t')[1];
                 if (username == activeUser.username)
@@ -211,6 +231,18 @@ namespace Exchange_Market
                         arrLine[i + 3] = "None";
                     else
                         arrLine[i + 3] = line;
+
+                    line = String.Join("\t", activeUser.history_addMoney);
+                    if (activeUser.history_addMoney.Count == 0)
+                        arrLine[i + 4] = "None";
+                    else
+                        arrLine[i + 4] = line;
+
+                    line = String.Join("\t", activeUser.history_getMoney);
+                    if (activeUser.history_getMoney.Count == 0)
+                        arrLine[i + 5] = "None";
+                    else
+                        arrLine[i + 5] = line;
                 }
                 File.WriteAllLines(@".\user_data.txt", arrLine);
             }

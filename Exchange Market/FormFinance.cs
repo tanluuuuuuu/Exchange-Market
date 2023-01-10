@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Exchange_Market
 {
@@ -25,6 +26,23 @@ namespace Exchange_Market
             lb_remain.Text = "Số dư: " + Globals.ActiveUser.remain_money.ToString("C5", CultureInfo.CurrentCulture);
             lb_allMoney.Text = "Tài sản ròng: " + Globals.ActiveUser.balance.ToString("C5", CultureInfo.CurrentCulture);
 
+            double total = Globals.ActiveUser.history_addMoney.Sum(x => x);
+            double profit = Globals.ActiveUser.balance + Globals.ActiveUser.remain_money - total;
+            if (profit == 0)
+            {
+                lb_profit.Visible = false;
+            }
+            else if (profit < 0)
+            {
+                lb_profit.ForeColor = Color.Red;
+                lb_profit.Text = "Thiệt hại: " + (-profit).ToString("C5", CultureInfo.CurrentCulture);
+            }
+            else
+            {
+                lb_profit.ForeColor = Color.Green;
+                lb_profit.Text = "Lời: " + (profit).ToString("C5", CultureInfo.CurrentCulture);
+            }
+
             flowLayoutPanel1.Controls.Clear();
             foreach(var crt in Globals.ActiveUser.owned_crypto)
             {
@@ -35,15 +53,21 @@ namespace Exchange_Market
         private void addCryptoToPanle(OwnCrypto crt)
         {
             Panel panel7 = new System.Windows.Forms.Panel();
-            
 
+            int index = Globals.ActiveUser.history.FindIndex(q => q.crypto.code_name == crt.crypto.code_name);
+            double atprice = Globals.ActiveUser.history[index].atPrice;
+            double profit = (crt.crypto.sell_prices[29] - atprice) / atprice * 100;
             Label label10 = new System.Windows.Forms.Label();
             label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label10.Location = new System.Drawing.Point(63, 67);
             label10.Size = new System.Drawing.Size(62, 20);
-            label10.Text = crt.crypto.convert.ToString("0.##");
+            label10.Text = profit.ToString("0.##") + "%";
+            if (profit >= 0)
+                label10.ForeColor = Color.Green;
+            else
+                label10.ForeColor = Color.Red;
 
             Label label2 = new Label();
             label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -150,6 +174,13 @@ namespace Exchange_Market
         private void button7_Click(object sender, EventArgs e)
         {
             FormAddMoney form = new FormAddMoney();
+            form.ShowDialog();
+            FormFinance_Load(sender, e);
+        }
+
+        private void btn_getMoney_Click(object sender, EventArgs e)
+        {
+            FormGetMoney form = new FormGetMoney();
             form.ShowDialog();
             FormFinance_Load(sender, e);
         }

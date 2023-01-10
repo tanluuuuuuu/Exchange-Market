@@ -84,6 +84,12 @@
     <Compile Include="FormForgotPassword.Designer.cs">
       <DependentUpon>FormForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGetMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGetMoney.Designer.cs">
+      <DependentUpon>FormGetMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormForgotPassword.resx">
       <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGetMoney.resx">
+      <DependentUpon>FormGetMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>

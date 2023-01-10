@@ -39,6 +39,7 @@ namespace Exchange_Market
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_getMoney = new System.Windows.Forms.Button();
             this.lb_allMoney = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@ namespace Exchange_Market
             this.lb_remain = new System.Windows.Forms.Label();
             this.lb_accountName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_profit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -148,6 +150,8 @@ namespace Exchange_Market
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lb_profit);
+            this.groupBox1.Controls.Add(this.btn_getMoney);
             this.groupBox1.Controls.Add(this.lb_allMoney);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button7);
@@ -164,6 +168,16 @@ namespace Exchange_Market
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tài chính cá nhân";
+            // 
+            // btn_getMoney
+            // 
+            this.btn_getMoney.Location = new System.Drawing.Point(12, 365);
+            this.btn_getMoney.Name = "btn_getMoney";
+            this.btn_getMoney.Size = new System.Drawing.Size(619, 46);
+            this.btn_getMoney.TabIndex = 11;
+            this.btn_getMoney.Text = "Rút tiền";
+            this.btn_getMoney.UseVisualStyleBackColor = true;
+            this.btn_getMoney.Click += new System.EventHandler(this.btn_getMoney_Click);
             // 
             // lb_allMoney
             // 
@@ -330,6 +344,15 @@ namespace Exchange_Market
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lb_profit
+            // 
+            this.lb_profit.AutoSize = true;
+            this.lb_profit.Location = new System.Drawing.Point(212, 146);
+            this.lb_profit.Name = "lb_profit";
+            this.lb_profit.Size = new System.Drawing.Size(121, 25);
+            this.lb_profit.TabIndex = 12;
+            this.lb_profit.Text = "Tài sản ròng";
+            // 
             // FormFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -380,5 +403,7 @@ namespace Exchange_Market
         private Label label4;
         private Label label2;
         private Label label1;
+        private Button btn_getMoney;
+        private Label lb_profit;
     }
 }

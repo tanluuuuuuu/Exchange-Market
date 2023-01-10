@@ -16,6 +16,8 @@ namespace Exchange_Market
         public List<OwnCrypto> owned_crypto;
         public List<Crypto> fav_crypto;
         public List<History> history;
+        public List<double> history_addMoney;
+        public List<double> history_getMoney;
 
         public User(String account_name = "", 
             String username = "",
@@ -24,7 +26,9 @@ namespace Exchange_Market
             double balance = 0,
             List<OwnCrypto> owned_crypto = null,
             List<Crypto> fav_crypto = null,
-            List<History> history = null)
+            List<History> history = null,
+            List<double> history_addMoney = null,
+            List<double> history_getMoney = null)
         {
             this.account_name = account_name;
             this.username = username;
@@ -50,6 +54,17 @@ namespace Exchange_Market
 
             this.balance = balance;
             this.remain_money = remain_money;
+
+            if (history_addMoney == null)
+            {
+                history_addMoney = new List<double>();
+            }
+            this.history_addMoney = history_addMoney;
+            if (history_getMoney == null)
+            {
+                history_getMoney = new List<double>();
+            }
+            this.history_getMoney = history_getMoney;
         }
     }
 }

@@ -38,7 +38,6 @@
             this.lb_name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tp_Sell = new System.Windows.Forms.TabPage();
-            this.tb_AddMoney = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tp_Buy.SuspendLayout();
@@ -52,7 +51,6 @@
             // 
             this.tabControl1.Controls.Add(this.tp_Buy);
             this.tabControl1.Controls.Add(this.tp_Sell);
-            this.tabControl1.Controls.Add(this.tb_AddMoney);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -152,16 +150,6 @@
             this.tp_Sell.Text = "Bán";
             this.tp_Sell.UseVisualStyleBackColor = true;
             // 
-            // tb_AddMoney
-            // 
-            this.tb_AddMoney.Location = new System.Drawing.Point(4, 38);
-            this.tb_AddMoney.Name = "tb_AddMoney";
-            this.tb_AddMoney.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_AddMoney.Size = new System.Drawing.Size(808, 467);
-            this.tb_AddMoney.TabIndex = 2;
-            this.tb_AddMoney.Text = "Nạp";
-            this.tb_AddMoney.UseVisualStyleBackColor = true;
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -196,7 +184,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tp_Buy;
         private System.Windows.Forms.TabPage tp_Sell;
-        private System.Windows.Forms.TabPage tb_AddMoney;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
