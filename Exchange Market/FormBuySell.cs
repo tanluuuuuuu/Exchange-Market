@@ -190,7 +190,7 @@ namespace Exchange_Market
         private void num_buy_ValueChanged(object sender, EventArgs e)
         {
             if(currentSelect != null)
-                label11.Text = "Thành tiền: " + (decimal.ToDouble(num_buy.Value) * currentSelect.buy_prices[29]).ToString("0.##");
+                label11.Text = "Thành tiền: " + (decimal.ToDouble(num_buy.Value) * currentSelect.buy_prices[29]).ToString("C5", CultureInfo.CurrentCulture);
         }
 
         private void sell_Click(object sender, EventArgs e)
