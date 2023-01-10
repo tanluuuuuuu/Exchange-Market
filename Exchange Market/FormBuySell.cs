@@ -231,5 +231,11 @@ namespace Exchange_Market
                 }
             }
         }
+
+        private void num_sell_ValueChanged(object sender, EventArgs e)
+        {
+            if (currentSelect != null)
+                label12.Text = "Thành tiền: " + (decimal.ToDouble(num_sell.Value) * currentSelect.sell_prices[29]).ToString("C5", CultureInfo.CurrentCulture);
+        }
     }
 }

@@ -252,6 +252,7 @@
             this.num_sell.Name = "num_sell";
             this.num_sell.Size = new System.Drawing.Size(120, 34);
             this.num_sell.TabIndex = 6;
+            this.num_sell.ValueChanged += new System.EventHandler(this.num_sell_ValueChanged);
             // 
             // label10
             // 

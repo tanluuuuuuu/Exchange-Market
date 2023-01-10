@@ -83,14 +83,17 @@ namespace Exchange_Market
             if ((comboBox1.Text == "" || comboBox2.Text == "") && textBox1.Text == "")
             {
                 MessageBox.Show("Hãy chọn đồng coin và nhập số coin.");
+                return;
             }
             else if (comboBox1.Text=="" || comboBox2.Text=="")
             {
                 MessageBox.Show("Hãy chọn coin để đổi.");
+                return;
             }
             else if(textBox1.Text== "")
             {
                 MessageBox.Show("Vui lòng nhập số coin.");
+                return;
             }
                 
                  
@@ -99,16 +102,16 @@ namespace Exchange_Market
             Console.WriteLine(textBox2.Text);
             if (comboBox1.Text != comboBox2.Text)
             {
-                x= (double)(double.Parse(textBox1.Text) * (crt1.buy_prices[29] / crt2.buy_prices[29]));
+                x = (double)(double.Parse(textBox1.Text) * (crt1.buy_prices[29] / crt2.buy_prices[29]));
                 textBox2.Text = x.ToString();
-                textBox3.Text =  ((double)(double.Parse(textBox1.Text) * crt1.buy_prices[29])).ToString("C5", CultureInfo.CurrentCulture);
-                
+                textBox3.Text = (double.Parse(textBox1.Text) * crt1.buy_prices[29]).ToString("C5", CultureInfo.CurrentCulture);
+
             }
             else
-                
+            {
                 textBox2.Text = textBox1.Text;
-                textBox3.Text = ((double)(double.Parse(textBox1.Text) * crt1.buy_prices[29])).ToString("C5", CultureInfo.CurrentCulture);
-
+                textBox3.Text = (double.Parse(textBox1.Text) * crt1.buy_prices[29]).ToString("C5", CultureInfo.CurrentCulture);
+            }
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
