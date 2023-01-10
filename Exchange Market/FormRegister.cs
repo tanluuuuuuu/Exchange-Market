@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Exchange_Market
 {
@@ -53,6 +54,23 @@ namespace Exchange_Market
 
                 this.Close();
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBox1.Checked)
+            {
+                tb_password.PasswordChar = '*';
+                tb_passwordAgain.PasswordChar= '*';
+            }
+            else
+
+            {
+                tb_password.PasswordChar = (char)0;
+                tb_passwordAgain.PasswordChar = (char)0;
+            }                    
+                
+                
         }
     }
 }
