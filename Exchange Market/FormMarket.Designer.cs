@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMarket));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -74,6 +74,9 @@
             this.flPanel_Innovation = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btn_comment = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -89,9 +92,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -114,6 +114,8 @@
             this.tab_Innovation.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_All)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
@@ -121,8 +123,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -562,6 +562,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bình luận";
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Controls.Add(this.groupBox2);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(6, 33);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(573, 225);
+            this.flowLayoutPanel3.TabIndex = 4;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(538, 100);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 22);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(526, 72);
+            this.textBox1.TabIndex = 0;
+            // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(585, 33);
@@ -614,17 +642,17 @@
             this.chart_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea13.Name = "ChartArea1";
-            this.chart_All.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.chart_All.Legends.Add(legend13);
+            chartArea1.Name = "ChartArea1";
+            this.chart_All.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_All.Legends.Add(legend1);
             this.chart_All.Location = new System.Drawing.Point(3, 0);
             this.chart_All.Name = "chart_All";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart_All.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart_All.Series.Add(series1);
             this.chart_All.Size = new System.Drawing.Size(1044, 465);
             this.chart_All.TabIndex = 0;
             this.chart_All.Text = "chart2";
@@ -644,10 +672,10 @@
             // 
             // chart3
             // 
-            chartArea14.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.chart3.Legends.Add(legend14);
+            chartArea2.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart3.Legends.Add(legend2);
             this.chart3.Location = new System.Drawing.Point(440, 6);
             this.chart3.Name = "chart3";
             this.chart3.Size = new System.Drawing.Size(1026, 566);
@@ -734,41 +762,15 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Controls.Add(this.groupBox2);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(6, 33);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(573, 225);
-            this.flowLayoutPanel3.TabIndex = 4;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(538, 100);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 22);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(526, 72);
-            this.textBox1.TabIndex = 0;
-            // 
             // FormMarket
             // 
+            this.AcceptButton = this.btn_comment;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 1003);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.Name = "FormMarket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMarket";
@@ -798,6 +800,9 @@
             this.tab_Innovation.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_All)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
@@ -806,9 +811,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
