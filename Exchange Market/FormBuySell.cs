@@ -146,6 +146,7 @@ namespace Exchange_Market
 
         private void button6_Click(object sender, EventArgs e)
         {
+            Globals.deactivateUser();
             FormLogin form = new FormLogin();
             this.Hide();
             form.ShowDialog();
@@ -237,6 +238,78 @@ namespace Exchange_Market
         {
             if (currentSelect != null)
                 label12.Text = "Thành tiền: " + (decimal.ToDouble(num_sell.Value) * currentSelect.sell_prices[29]).ToString("C5", CultureInfo.CurrentCulture);
+        }
+
+        private void btn_Filter_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+
+            foreach (var crt in Globals.Cryptos)
+            {
+                bool flg_name = false, flg_code_name = false, flg_type = false,
+                    flg_minSell = false, flg_maxSell = false, flg_minBuy = false, flg_maxBuy = false;
+                if (tb_name.Text != "")
+                {
+                    if (crt.name.ToLower().Contains(tb_name.Text.ToLower()))
+                    {
+                        flg_name = true;
+                    }
+                }
+                else
+                {
+                    flg_name = true;
+                }
+
+                if (tb_codename.Text != "")
+                {
+                    if (crt.code_name.ToLower().Contains(tb_codename.Text.ToLower()))
+                    {
+                        flg_code_name = true;
+                    }
+                }
+                else
+                {
+                    flg_code_name = true;
+                }
+
+                if (cb_type.Text != "")
+                {
+                    if (crt.type == cb_type.Text || cb_type.Text == "All")
+                    {
+                        flg_type = true;
+                    }
+                }
+                else
+                {
+                    flg_type = true;
+                }
+
+                if (decimal.ToDouble(numMinBuy.Value) <= crt.buy_prices[29])
+                {
+                    flg_minBuy = true;
+                }
+                if (decimal.ToDouble(numMaxBuy.Value) >= crt.buy_prices[29])
+                {
+                    flg_maxBuy = true;
+                }
+
+                if (decimal.ToDouble(numMinSell.Value) <= crt.sell_prices[29])
+                {
+                    flg_minSell = true;
+                }
+                if (decimal.ToDouble(numMaxSell.Value) >= crt.sell_prices[29])
+                {
+                    flg_maxSell = true;
+                }
+
+                if (flg_name && flg_code_name && flg_type &&
+                    flg_minSell &&flg_maxSell && flg_minBuy && flg_maxBuy)
+                {
+                    Panel panel = addCryptosToFlowPanel(crt);
+                    flowLayoutPanel1.Controls.Add(panel);
+                }
+                
+            }
         }
     }
 }

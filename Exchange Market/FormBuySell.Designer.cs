@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -53,6 +53,21 @@
             this.num_buy = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Filter = new System.Windows.Forms.Button();
+            this.numMaxBuy = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numMinBuy = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numMaxSell = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numMinSell = new System.Windows.Forms.NumericUpDown();
+            this.tb_codename = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_type = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tb_name = new System.Windows.Forms.TextBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,15 +75,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -77,11 +83,14 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_buy)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMaxBuy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinBuy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMaxSell)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinSell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -312,15 +321,21 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_Filter);
+            this.groupBox2.Controls.Add(this.numMaxBuy);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.numMinBuy);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.numMaxSell);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.numericUpDown1);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.numMinSell);
+            this.groupBox2.Controls.Add(this.tb_codename);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cb_type);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.tb_name);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(367, 389);
@@ -328,20 +343,179 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bộ lọc";
             // 
+            // btn_Filter
+            // 
+            this.btn_Filter.Location = new System.Drawing.Point(6, 326);
+            this.btn_Filter.Name = "btn_Filter";
+            this.btn_Filter.Size = new System.Drawing.Size(355, 47);
+            this.btn_Filter.TabIndex = 18;
+            this.btn_Filter.Text = "Lọc";
+            this.btn_Filter.UseVisualStyleBackColor = true;
+            this.btn_Filter.Click += new System.EventHandler(this.btn_Filter_Click);
+            // 
+            // numMaxBuy
+            // 
+            this.numMaxBuy.Location = new System.Drawing.Point(135, 268);
+            this.numMaxBuy.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numMaxBuy.Name = "numMaxBuy";
+            this.numMaxBuy.Size = new System.Drawing.Size(215, 34);
+            this.numMaxBuy.TabIndex = 17;
+            this.numMaxBuy.Value = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(5, 273);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 29);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Giá mua >";
+            // 
+            // numMinBuy
+            // 
+            this.numMinBuy.Location = new System.Drawing.Point(135, 228);
+            this.numMinBuy.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numMinBuy.Name = "numMinBuy";
+            this.numMinBuy.Size = new System.Drawing.Size(215, 34);
+            this.numMinBuy.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(5, 233);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(122, 29);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Giá mua <";
+            // 
+            // numMaxSell
+            // 
+            this.numMaxSell.Location = new System.Drawing.Point(135, 188);
+            this.numMaxSell.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numMaxSell.Name = "numMaxSell";
+            this.numMaxSell.Size = new System.Drawing.Size(215, 34);
+            this.numMaxSell.TabIndex = 13;
+            this.numMaxSell.Value = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 190);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 29);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Giá bán >";
+            // 
+            // numMinSell
+            // 
+            this.numMinSell.Location = new System.Drawing.Point(135, 148);
+            this.numMinSell.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numMinSell.Name = "numMinSell";
+            this.numMinSell.Size = new System.Drawing.Size(215, 34);
+            this.numMinSell.TabIndex = 11;
+            // 
+            // tb_codename
+            // 
+            this.tb_codename.Location = new System.Drawing.Point(135, 68);
+            this.tb_codename.Name = "tb_codename";
+            this.tb_codename.Size = new System.Drawing.Size(215, 34);
+            this.tb_codename.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 29);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Code";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 150);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 29);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Giá bán <";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 29);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Loại";
+            // 
+            // cb_type
+            // 
+            this.cb_type.FormattingEnabled = true;
+            this.cb_type.Items.AddRange(new object[] {
+            "All",
+            "Metaverse",
+            "Gaming",
+            "DeFi",
+            "Innovation"});
+            this.cb_type.Location = new System.Drawing.Point(135, 105);
+            this.cb_type.Name = "cb_type";
+            this.cb_type.Size = new System.Drawing.Size(215, 37);
+            this.cb_type.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 29);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Tên";
+            // 
+            // tb_name
+            // 
+            this.tb_name.Location = new System.Drawing.Point(135, 30);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(215, 34);
+            this.tb_name.TabIndex = 4;
+            // 
             // chart1
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea12.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chart1.Legends.Add(legend12);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(376, 0);
             this.chart1.Name = "chart1";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.chart1.Series.Add(series12);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(701, 389);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -412,80 +586,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 29);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Tên";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(135, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 34);
-            this.textBox1.TabIndex = 4;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 37);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 128);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 29);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Loại";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 178);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 29);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Giá bán ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 29);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Code";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(135, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 34);
-            this.textBox2.TabIndex = 10;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(135, 176);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(215, 34);
-            this.numericUpDown1.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 272);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 29);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Giá bán ";
-            // 
             // FormBuySell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -508,12 +608,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_buy)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMaxBuy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinBuy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMaxSell)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinSell)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,13 +653,19 @@
         private System.Windows.Forms.Label lb_moneyBuy;
         private System.Windows.Forms.Label lb_moneySell;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_name;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cb_type;
+        private System.Windows.Forms.TextBox tb_codename;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numMinSell;
+        private System.Windows.Forms.NumericUpDown numMaxSell;
+        private System.Windows.Forms.NumericUpDown numMaxBuy;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown numMinBuy;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btn_Filter;
     }
 }
