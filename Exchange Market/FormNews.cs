@@ -56,7 +56,7 @@ namespace Exchange_Market
                 panel_NewsItem.Text = Globals.Chat[i].name;
                 panel_NewsItem.Location = new System.Drawing.Point(3, 3);
                 panel_NewsItem.Size = new System.Drawing.Size(700, 59 + size.Height);
-                panel_NewsItem.Click += (sender, e) => onPanelClick(sender, e, Globals.Chat[i].name);
+                panel_NewsItem.Click += (sender, e) => onPanelClick(sender, e, panel_NewsItem.Text);
 
                 flowLayoutPanel1.Controls.Add(panel_NewsItem);
             }

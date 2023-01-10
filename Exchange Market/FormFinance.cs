@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,7 +51,7 @@ namespace Exchange_Market
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label2.Location = new System.Drawing.Point(124, 67);
             label2.Size = new System.Drawing.Size(53, 20);
-            label2.Text = "Giá trị: " + (crt.crypto.buy_prices[29] * crt.quantity).ToString("C5", CultureInfo.CurrentCulture);
+            label2.Text = "Giá trị: " + (crt.crypto.sell_prices[29] * crt.quantity).ToString("C5", CultureInfo.CurrentCulture);
 
             Label label11 = new System.Windows.Forms.Label();
             label11.AutoSize = true;

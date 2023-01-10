@@ -183,8 +183,14 @@ namespace Exchange_Market
                 Globals.ActiveUser.owned_crypto[index].quantity += decimal.ToDouble(num_buy.Value);
             }
             Globals.ActiveUser.remain_money -= (decimal.ToDouble(num_buy.Value) * currentSelect.buy_prices[29]);
-            History his = new History(currentSelect, decimal.ToDouble(num_buy.Value), "buy");
+            History his = new History(currentSelect, decimal.ToDouble(num_buy.Value), "buy", currentSelect.buy_prices[29]);
             Globals.ActiveUser.history.Add(his);
+            double sum = 0;
+            foreach (var crt in Globals.ActiveUser.owned_crypto)
+            {
+                sum += crt.crypto.sell_prices[29] * crt.quantity;
+            }
+            Globals.ActiveUser.balance = sum;
             Globals.updateUserData();
             MessageBox.Show("Mua thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString("C5", CultureInfo.CurrentCulture));
         }
@@ -225,9 +231,19 @@ namespace Exchange_Market
                 else
                 {
                     Globals.ActiveUser.owned_crypto[index].quantity -= decimal.ToDouble(num_sell.Value);
-                    Globals.ActiveUser.remain_money += (decimal.ToDouble(num_sell.Value) * currentSelect.buy_prices[29]);
-                    History his = new History(currentSelect, decimal.ToDouble(num_sell.Value), "sell");
+                    Globals.ActiveUser.remain_money += (decimal.ToDouble(num_sell.Value) * currentSelect.sell_prices[29]);
+                    History his = new History(currentSelect, decimal.ToDouble(num_sell.Value), "sell", currentSelect.sell_prices[29]);
                     Globals.ActiveUser.history.Add(his);
+                    if (Globals.ActiveUser.owned_crypto[index].quantity == 0)
+                    {
+                        Globals.ActiveUser.owned_crypto.Remove(Globals.ActiveUser.owned_crypto[index]);
+                    }
+                    double sum = 0;
+                    foreach (var crt in Globals.ActiveUser.owned_crypto)
+                    {
+                        sum += crt.crypto.sell_prices[29] * crt.quantity;
+                    }
+                    Globals.ActiveUser.balance = sum;
                     Globals.updateUserData();
                     MessageBox.Show("Bán thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString("C5", CultureInfo.CurrentCulture));
                 }

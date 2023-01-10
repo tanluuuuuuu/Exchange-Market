@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -71,15 +72,21 @@ namespace Exchange_Market
                 var owned_crypto_names = owned_cryptos.Split('\t');
                 if (owned_crypto_names[0] != "None")
                 {
+                    double sum = 0;
                     foreach (var crt_code_name_and_quantity in owned_crypto_names)
                     {
                         String crt_code_name = crt_code_name_and_quantity.Split('_')[0];
                         double quantity = Convert.ToDouble(crt_code_name_and_quantity.Split('_')[1]);
                         int index = cryptos.FindIndex(a => a.code_name == crt_code_name);
                         OwnCrypto t = new OwnCrypto(cryptos[index], quantity);
+                        sum += cryptos[index].sell_prices[29] * quantity;
                         user.owned_crypto.Add(t);
                     }
-                }    
+                    user.balance = sum;
+                }
+                else
+                    user.balance = 0;
+                
                 userList.Add(user);
             }
 
@@ -148,7 +155,7 @@ namespace Exchange_Market
                         {
                             String[] his_split = his.Split('_');
                             int index = cryptos.FindIndex(a => a.code_name == his_split[0]);
-                            History his_object = new History(cryptos[index], Convert.ToDouble(his_split[1]), his_split[2]);
+                            History his_object = new History(cryptos[index], Convert.ToDouble(his_split[1]), his_split[2], Convert.ToDouble(his_split[3]));
                             activeUser.history.Add(his_object);
                         }
                     }
@@ -197,7 +204,7 @@ namespace Exchange_Market
                     list_line = new List<string>();
                     foreach (var his in activeUser.history)
                     {
-                        list_line.Add(his.crypto.code_name + "_" + his.quantity.ToString("0.##") + "_" + his.type);
+                        list_line.Add(his.crypto.code_name + "_" + his.quantity.ToString("0.##") + "_" + his.type + "_" + his.atPrice.ToString());
                     }
                     line = String.Join("\t", list_line.ToArray());
                     if (activeUser.history.Count == 0)
