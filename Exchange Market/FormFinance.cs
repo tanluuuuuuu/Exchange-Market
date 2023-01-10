@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,8 @@ namespace Exchange_Market
         private void FormFinance_Load(object sender, EventArgs e)
         {
             lb_accountName.Text = "Tên hiển thị: " + Globals.ActiveUser.account_name;
-            lb_remain.Text = "Số dư: " + Globals.ActiveUser.remain_money.ToString();
-            lb_allMoney.Text = "Tài sản ròng: " + Globals.ActiveUser.balance.ToString();
+            lb_remain.Text = "Số dư: " + Globals.ActiveUser.remain_money.ToString("C", CultureInfo.CurrentCulture);
+            lb_allMoney.Text = "Tài sản ròng: " + Globals.ActiveUser.balance.ToString("C3", CultureInfo.CurrentCulture);
 
             flowLayoutPanel1.Controls.Clear();
             foreach(var crt in Globals.ActiveUser.owned_crypto)
@@ -140,7 +141,8 @@ namespace Exchange_Market
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            FormHistory form = new FormHistory();
+            form.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)
