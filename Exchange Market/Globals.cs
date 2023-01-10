@@ -20,9 +20,12 @@ namespace Exchange_Market
 
         private static List<User> userList = new List<User>();
         private static User activeUser = null;
+
+        private static List<Annoucement> chat = new List<Annoucement>();
         public static List<Crypto> Cryptos { get => cryptos; set => cryptos = value; }
         public static List<User> UserList { get => userList; set => userList = value; }
         public static User ActiveUser { get => activeUser; set => activeUser = value; }
+        public static List<Annoucement> Chat { get => chat; set => chat = value; }
 
         static Globals()
         {
@@ -79,6 +82,19 @@ namespace Exchange_Market
                 }    
                 userList.Add(user);
             }
+
+            // Load chat
+            string[] lines_chat = System.IO.File.ReadAllLines(@".\chat.txt");
+            foreach(var line in lines_chat)
+            {
+                String userName = line.Trim().Split('\t')[0];
+                String content = line.Trim().Split('\t')[1];
+                DateTime date = DateTime.Parse(line.Trim().Split('\t')[2]);
+
+                Annoucement new_annount = new Annoucement(userName, content, date);
+                chat.Add(new_annount);
+            }
+
         }
 
         public static void setUpActiveUser(String userName)
@@ -169,6 +185,17 @@ namespace Exchange_Market
                 }
                 File.WriteAllLines(@".\user_data.txt", arrLine);
             }
+        }
+
+        public static void updateChatData()
+        {
+            List<String> arrLine = new List<String>();
+            foreach (var ann in chat)
+            {
+                String line = ann.name + "\t" + ann.content + "\t" + ann.date;
+                arrLine.Add(line);
+            }
+            File.WriteAllLines(@".\chat.txt", arrLine);
         }
     }
 }

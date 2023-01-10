@@ -10,10 +10,12 @@ namespace Exchange_Market
     {
         public String name;
         public String content;
-        public Annoucement(String name = "", String content = "")
+        public DateTime date;
+        public Annoucement(String name = "", String content = "", DateTime date = default)
         {
             this.name = name;
             this.content = content;
+            this.date = date;
         }
     }
 }

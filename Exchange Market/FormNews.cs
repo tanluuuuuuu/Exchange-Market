@@ -13,8 +13,6 @@ namespace Exchange_Market
 {
     public partial class FormNews : Form
     {
-        List<Annoucement> annoucements = new List<Annoucement>();
-
         public FormNews()
         {
             InitializeComponent();
@@ -22,21 +20,22 @@ namespace Exchange_Market
 
         private void btn_dangBai_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text == "" || richTextBox2.Text == "")
+            if (richTextBox2.Text == "")
             {
-                MessageBox.Show("Không được để trống tên hiển thị và nội dung bài");
+                MessageBox.Show("Không được để trống nội dung");
             }
 
-            Annoucement annoucement = new Annoucement(textBox3.Text, richTextBox2.Text);
-            annoucements.Add(annoucement);
+            Annoucement annoucement = new Annoucement(Globals.ActiveUser.account_name, richTextBox2.Text);
+            Globals.Chat.Add(annoucement);
             renderAnnouncements();
-            MessageBox.Show("OK");
+            richTextBox2.Text = "";
+            Globals.updateChatData();
         }
 
         private void renderAnnouncements()
         {
             flowLayoutPanel1.Controls.Clear();
-            for(var i = 0; i < annoucements.Count(); i++)
+            for(var i = 0; i < Globals.Chat.Count(); i++)
             {
                 GroupBox panel_NewsItem = new System.Windows.Forms.GroupBox();
 
@@ -47,14 +46,14 @@ namespace Exchange_Market
                 textBox2.Enabled = false;
                 textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 textBox2.Location = new System.Drawing.Point(4, 38);
-                Size size = TextRenderer.MeasureText(annoucements[i].content, textBox3.Font);
+                Size size = TextRenderer.MeasureText(Globals.Chat[i].content, textBox2.Font);
                 textBox2.Size = new System.Drawing.Size(175, size.Height + 10);
-                textBox2.Text = annoucements[i].content;
+                textBox2.Text = Globals.Chat[i].content;
 
                 // panel_NewsItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
                 panel_NewsItem.Controls.Add(textBox2);
                 panel_NewsItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                panel_NewsItem.Text = annoucements[i].name;
+                panel_NewsItem.Text = Globals.Chat[i].name;
                 panel_NewsItem.Location = new System.Drawing.Point(3, 3);
                 panel_NewsItem.Size = new System.Drawing.Size(720, 59 + size.Height);
 
@@ -102,6 +101,11 @@ namespace Exchange_Market
             FormMarket form = new FormMarket();
             this.Hide();
             form.ShowDialog();
+        }
+
+        private void FormNews_Load(object sender, EventArgs e)
+        {
+            renderAnnouncements();
         }
     }
 }
