@@ -61,11 +61,11 @@ namespace Exchange_Market
                 if (lines_user[i] == "")
                     break;
 
-                var accDetail = lines_user[i].Trim().Split(',');
+                var accDetail = lines_user[i].Trim().Split('\t');
                 User user = new User(accDetail[0], accDetail[1], accDetail[2], Convert.ToDouble(accDetail[3]), Convert.ToDouble(accDetail[4]));
                 
                 String owned_cryptos = lines_user[i + 1];
-                var owned_crypto_names = owned_cryptos.Split(',');
+                var owned_crypto_names = owned_cryptos.Split('\t');
                 if (owned_crypto_names[0] != "None")
                 {
                     foreach (var crt_code_name_and_quantity in owned_crypto_names)
@@ -86,7 +86,7 @@ namespace Exchange_Market
             string[] lines_user = System.IO.File.ReadAllLines(@".\user_data.txt");
             for (int i = 0; i < lines_user.Count(); i += 4)
             {
-                var accDetail = lines_user[i].Trim().Split(',');
+                var accDetail = lines_user[i].Trim().Split('\t');
                 if (accDetail[1] == userName)
                 {
                     // Get user from list
@@ -94,7 +94,7 @@ namespace Exchange_Market
 
                     // Load additional fav crypto
                     // BTC,ETH
-                    String[] fav_cryptos = lines_user[i + 2].Split(',');
+                    String[] fav_cryptos = lines_user[i + 2].Split('\t');
                     if (fav_cryptos[0] != "None")
                     {
                         foreach (String crt_code_name in fav_cryptos)
@@ -108,7 +108,7 @@ namespace Exchange_Market
                     // Load additional history
                     // Format: Name_Quantity_Type(sell/buy)
                     // BTC_2.5_sell,ETH_2.5_buy
-                    String[] history = lines_user[i + 3].Trim().Split(',');
+                    String[] history = lines_user[i + 3].Trim().Split('\t');
                     if (history[0] != "None")
                     {
                         foreach (String his in history)
@@ -128,10 +128,10 @@ namespace Exchange_Market
             string[] arrLine = File.ReadAllLines(@".\user_data.txt");
             for (int i = 0; i < arrLine.Count(); i += 4)
             {
-                String username = arrLine[i].Trim().Split(',')[1];
+                String username = arrLine[i].Trim().Split('\t')[1];
                 if (username == activeUser.username)
                 {
-                    String line = activeUser.account_name + "," + activeUser.username + "," + activeUser.password + "," + activeUser.remain_money.ToString().Replace(',', '.') + "," + activeUser.balance.ToString().Replace(',', '.');
+                    String line = activeUser.account_name + "\t" + activeUser.username + "\t" + activeUser.password + "\t" + activeUser.remain_money.ToString() + "\t" + activeUser.balance.ToString();
                     arrLine[i] = line;
 
                     List<String> list_line = new List<string>();
@@ -139,7 +139,7 @@ namespace Exchange_Market
                     {
                         list_line.Add(crt.crypto.code_name + "_" + crt.quantity.ToString("0.##"));
                     }
-                    line = String.Join(",", list_line.ToArray());
+                    line = String.Join("\t", list_line.ToArray());
                     if (activeUser.owned_crypto.Count == 0)
                         arrLine[i + 1] = "None";
                     else
@@ -150,7 +150,7 @@ namespace Exchange_Market
                     {
                         list_line.Add(crt.code_name);
                     }
-                    line = String.Join(",", list_line.ToArray());
+                    line = String.Join("\t", list_line.ToArray());
                     if (activeUser.fav_crypto.Count == 0)
                         arrLine[i + 2] = "None";
                     else
@@ -161,7 +161,7 @@ namespace Exchange_Market
                     {
                         list_line.Add(his.crypto.code_name + "_" + his.quantity.ToString("0.##") + "_" + his.type);
                     }
-                    line = String.Join(",", list_line.ToArray());
+                    line = String.Join("\t", list_line.ToArray());
                     if (activeUser.history.Count == 0)
                         arrLine[i + 3] = "None";
                     else
