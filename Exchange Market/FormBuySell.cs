@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Collections;
+using System.Globalization;
 
 namespace Exchange_Market
 {
@@ -183,7 +184,7 @@ namespace Exchange_Market
             History his = new History(currentSelect, decimal.ToDouble(num_buy.Value), "buy");
             Globals.ActiveUser.history.Add(his);
             Globals.updateUserData();
-            MessageBox.Show("Mua thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString());
+            MessageBox.Show("Mua thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString("C5", CultureInfo.CurrentCulture));
         }
 
         private void num_buy_ValueChanged(object sender, EventArgs e)
@@ -226,7 +227,7 @@ namespace Exchange_Market
                     History his = new History(currentSelect, decimal.ToDouble(num_sell.Value), "sell");
                     Globals.ActiveUser.history.Add(his);
                     Globals.updateUserData();
-                    MessageBox.Show("Bán thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString());
+                    MessageBox.Show("Bán thành công, số dư mới: " + Globals.ActiveUser.remain_money.ToString("C5", CultureInfo.CurrentCulture));
                 }
             }
         }

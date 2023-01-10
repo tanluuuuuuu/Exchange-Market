@@ -26,6 +26,7 @@ namespace Exchange_Market
             {
                 comboBox1.Items.Add(crypto.code_name);
                 comboBox2.Items.Add(crypto.code_name);
+                
             }
         }
 
@@ -90,7 +91,8 @@ namespace Exchange_Market
             else
                 
                 textBox2.Text = textBox1.Text;
-            textBox3.Text = (float)(float.Parse(textBox1.Text) * crt1.buy_prices[29]) + " ";
+                textBox3.Text = (float)(float.Parse(textBox1.Text) * crt1.buy_prices[29]) + " ";
+                
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -118,5 +120,8 @@ namespace Exchange_Market
 
             }
         }
+        
+
+
     }
 }
