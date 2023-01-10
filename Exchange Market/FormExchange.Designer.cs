@@ -38,6 +38,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -171,6 +171,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ETH";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 25);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "VNĐ";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(6, 175);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(234, 38);
+            this.textBox3.TabIndex = 4;
+            // 
             // textBox2
             // 
             this.textBox2.Enabled = false;
@@ -279,24 +297,6 @@
             this.comboBox1.Size = new System.Drawing.Size(239, 39);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(6, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 38);
-            this.textBox3.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "$";
             // 
             // FormExchange
             // 

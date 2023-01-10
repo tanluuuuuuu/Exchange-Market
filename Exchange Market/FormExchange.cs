@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,20 +80,35 @@ namespace Exchange_Market
 
         private void button7_Click(object sender, EventArgs e)
         {
+            if ((comboBox1.Text == "" || comboBox2.Text == "") && textBox1.Text == "")
+            {
+                MessageBox.Show("Hãy chọn đồng coin và nhập số coin.");
+            }
+            else if (comboBox1.Text=="" || comboBox2.Text=="")
+            {
+                MessageBox.Show("Hãy chọn coin để đổi.");
+            }
+            else if(textBox1.Text== "")
+            {
+                MessageBox.Show("Vui lòng nhập số coin.");
+            }
+                
+                 
             double x;
             Console.WriteLine(textBox1.Text); 
             Console.WriteLine(textBox2.Text);
             if (comboBox1.Text != comboBox2.Text)
             {
-                x= (float)(float.Parse(textBox1.Text) * (crt1.buy_prices[29] / crt2.buy_prices[29]));
-                textBox2.Text = x + "";
-                textBox3.Text =  (float)(float.Parse(textBox1.Text) * crt1.buy_prices[29]) + " ";
+                x= (double)(double.Parse(textBox1.Text) * (crt1.buy_prices[29] / crt2.buy_prices[29]));
+                textBox2.Text = x.ToString();
+                textBox3.Text =  ((double)(double.Parse(textBox1.Text) * crt1.buy_prices[29])).ToString("C5", CultureInfo.CurrentCulture);
+                
             }
             else
                 
                 textBox2.Text = textBox1.Text;
-                textBox3.Text = (float)(float.Parse(textBox1.Text) * crt1.buy_prices[29]) + " ";
-                
+                textBox3.Text = ((double)(double.Parse(textBox1.Text) * crt1.buy_prices[29])).ToString("C5", CultureInfo.CurrentCulture);
+
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
