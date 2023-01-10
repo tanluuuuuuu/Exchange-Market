@@ -18,6 +18,7 @@ namespace Exchange_Market
         public List<double> buy_prices;
         public String type;
         public bool isFav;
+        public List<Annoucement> comments;
 
         public Crypto(
             String name = "", 
@@ -27,7 +28,8 @@ namespace Exchange_Market
             List<double> sell_prices = null, 
             List<double> buy_prices = null, 
             String type = "", 
-            bool isFav = false
+            bool isFav = false,
+            List<Annoucement> comments = null
             )
         {
             this.name = name;
@@ -39,6 +41,10 @@ namespace Exchange_Market
             this.buy_prices = buy_prices;
             this.type = type;
             this.isFav = isFav;
+            if (comments != null)
+                this.comments = comments;
+            else
+                this.comments = new List<Annoucement>();
         }
     }
 }

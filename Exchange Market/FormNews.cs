@@ -55,7 +55,7 @@ namespace Exchange_Market
                 panel_NewsItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 panel_NewsItem.Text = Globals.Chat[i].name;
                 panel_NewsItem.Location = new System.Drawing.Point(3, 3);
-                panel_NewsItem.Size = new System.Drawing.Size(720, 59 + size.Height);
+                panel_NewsItem.Size = new System.Drawing.Size(700, 59 + size.Height);
 
                 flowLayoutPanel1.Controls.Add(panel_NewsItem);
             }

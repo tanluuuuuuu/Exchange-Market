@@ -23,12 +23,21 @@ namespace Exchange_Market
 
         private void FormMarket_Load(object sender, EventArgs e)
         {
+            if (currentSelect != null)
+            {
+                if (currentSelect.isFav)
+                    button7.Text = "Bỏ thích";
+                else
+                    button7.Text = "Yêu thích";
+            }
+
             flPanel_All.Controls.Clear();
             flPanel_Metaverse.Controls.Clear();
             flPanel_Gaming.Controls.Clear();
             flPanel_DeFi.Controls.Clear();
             flPanel_Innovation.Controls.Clear();
             flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel3.Controls.Clear();
 
             foreach (var crt in Globals.Cryptos)
             {
@@ -45,12 +54,12 @@ namespace Exchange_Market
                     flPanel_DeFi.Controls.Add(panel);
                 else if (crt.type == "Innovation")
                     flPanel_Innovation.Controls.Add(panel);
+            }
 
-                if (crt.isFav)
-                {
-                    panel = addCryptosToFlowPanel(crt);
-                    flowLayoutPanel1.Controls.Add(panel);
-                }
+            foreach (var crt in Globals.ActiveUser.fav_crypto)
+            {
+                Panel panel = addCryptosToFlowPanel(crt);
+                flowLayoutPanel1.Controls.Add(panel);
             }
         }
 
@@ -102,9 +111,35 @@ namespace Exchange_Market
             return panel2;
         }
 
+        private GroupBox createGroupBox(Annoucement cm)
+        {
+            TextBox textBox1 = new TextBox();
+            textBox1.Location = new System.Drawing.Point(6, 22);
+            textBox1.Multiline = true;
+            textBox1.Size = new System.Drawing.Size(400, 72);
+            textBox1.Text = cm.content;
+
+            GroupBox groupBox2 = new GroupBox();
+            groupBox2.Controls.Add(textBox1);
+            groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            groupBox2.Location = new System.Drawing.Point(3, 3);
+            groupBox2.Size = new System.Drawing.Size(400, 100);
+            groupBox2.Text = cm.name;
+
+            return groupBox2;
+        }
+
         private void onPanelClick(object sender, EventArgs e, Crypto crt)
         {
+
             currentSelect = crt;
+            flowLayoutPanel3.Controls.Clear();
+
+            if (currentSelect.isFav)
+                button7.Text = "Bỏ thích";
+            else
+                button7.Text = "Yêu thích";
+
             chart3.Series.Clear();
             chart_All.Series.Clear();
 
@@ -132,6 +167,12 @@ namespace Exchange_Market
             chart_All.Series.Add(series_sell);
             chart_All.Series.Add(series_buy);
             chart_All.ChartAreas[0].AxisY.Maximum = Convert.ToInt32(Math.Max(max_sell, max_buy)) + 100;
+
+            foreach (var comm in currentSelect.comments)
+            {
+                GroupBox grb = createGroupBox(comm);
+                flowLayoutPanel3.Controls.Add(grb);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -178,8 +219,16 @@ namespace Exchange_Market
 
         private void button7_Click(object sender, EventArgs e)
         {
-            currentSelect.isFav = true;
+            currentSelect.isFav = !currentSelect.isFav;
+            int index = Globals.ActiveUser.fav_crypto.FindIndex(q => q.code_name == currentSelect.code_name);
+            if (index == -1)
+            {
+                Globals.ActiveUser.fav_crypto.Add(currentSelect);
+            }
+            else
+                Globals.ActiveUser.fav_crypto.Remove(Globals.ActiveUser.fav_crypto[index]);
 
+            Globals.updateUserData();
             FormMarket_Load(sender, e);
         }
 
@@ -187,6 +236,33 @@ namespace Exchange_Market
         {
             FormCryptoDetail form = new FormCryptoDetail(currentSelect);
             form.ShowDialog();
+        }
+
+        private void btn_comment_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.Text == "")
+            {
+                return;
+            }
+            if (currentSelect == null)
+            {
+                return;
+            }
+
+            Annoucement comment = new Annoucement(Globals.ActiveUser.account_name,
+                richTextBox1.Text,
+                DateTime.Now,
+                currentSelect);
+            currentSelect.comments.Add(comment);
+            Globals.updateCryptoComment();
+            richTextBox1.Text = "";
+            
+            flowLayoutPanel3.Controls.Clear();
+            foreach (var comm in currentSelect.comments)
+            {
+                GroupBox grb = createGroupBox(comm);
+                flowLayoutPanel3.Controls.Add(grb);
+            }
         }
     }
 }

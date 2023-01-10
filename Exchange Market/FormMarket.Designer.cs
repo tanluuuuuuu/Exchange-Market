@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMarket));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -73,6 +73,9 @@
             this.tab_Innovation = new System.Windows.Forms.TabPage();
             this.flPanel_Innovation = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btn_comment = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -86,6 +89,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -107,6 +113,7 @@
             this.tab_DeFi.SuspendLayout();
             this.tab_Innovation.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_All)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
@@ -114,6 +121,8 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -531,6 +540,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.groupBox1);
             this.panel4.Controls.Add(this.button9);
             this.panel4.Controls.Add(this.button8);
             this.panel4.Controls.Add(this.button7);
@@ -540,9 +550,39 @@
             this.panel4.Size = new System.Drawing.Size(1056, 878);
             this.panel4.TabIndex = 1;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.flowLayoutPanel3);
+            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.btn_comment);
+            this.groupBox1.Location = new System.Drawing.Point(3, 452);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(853, 271);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Bình luận";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(585, 33);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(262, 182);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
+            // 
+            // btn_comment
+            // 
+            this.btn_comment.Location = new System.Drawing.Point(772, 221);
+            this.btn_comment.Name = "btn_comment";
+            this.btn_comment.Size = new System.Drawing.Size(75, 37);
+            this.btn_comment.TabIndex = 2;
+            this.btn_comment.Text = "Go";
+            this.btn_comment.UseVisualStyleBackColor = true;
+            this.btn_comment.Click += new System.EventHandler(this.btn_comment_Click);
+            // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(588, 666);
+            this.button9.Location = new System.Drawing.Point(862, 471);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(181, 50);
             this.button9.TabIndex = 3;
@@ -552,18 +592,18 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(775, 666);
+            this.button8.Location = new System.Drawing.Point(862, 537);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(131, 50);
+            this.button8.Size = new System.Drawing.Size(181, 50);
             this.button8.TabIndex = 2;
             this.button8.Text = "Mua";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(912, 666);
+            this.button7.Location = new System.Drawing.Point(862, 610);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(131, 50);
+            this.button7.Size = new System.Drawing.Size(181, 50);
             this.button7.TabIndex = 1;
             this.button7.Text = "Yêu thích";
             this.button7.UseVisualStyleBackColor = true;
@@ -574,18 +614,18 @@
             this.chart_All.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart_All.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_All.Legends.Add(legend1);
-            this.chart_All.Location = new System.Drawing.Point(0, 0);
+            chartArea13.Name = "ChartArea1";
+            this.chart_All.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.chart_All.Legends.Add(legend13);
+            this.chart_All.Location = new System.Drawing.Point(3, 0);
             this.chart_All.Name = "chart_All";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_All.Series.Add(series1);
-            this.chart_All.Size = new System.Drawing.Size(1047, 586);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chart_All.Series.Add(series7);
+            this.chart_All.Size = new System.Drawing.Size(1044, 465);
             this.chart_All.TabIndex = 0;
             this.chart_All.Text = "chart2";
             // 
@@ -604,10 +644,10 @@
             // 
             // chart3
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart3.Legends.Add(legend2);
+            chartArea14.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.chart3.Legends.Add(legend14);
             this.chart3.Location = new System.Drawing.Point(440, 6);
             this.chart3.Name = "chart3";
             this.chart3.Size = new System.Drawing.Size(1026, 566);
@@ -694,6 +734,34 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Controls.Add(this.groupBox2);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(6, 33);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(573, 225);
+            this.flowLayoutPanel3.TabIndex = 4;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(538, 100);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 22);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(526, 72);
+            this.textBox1.TabIndex = 0;
+            // 
             // FormMarket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -729,6 +797,7 @@
             this.tab_DeFi.ResumeLayout(false);
             this.tab_Innovation.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart_All)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
@@ -737,6 +806,9 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -795,5 +867,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_comment;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

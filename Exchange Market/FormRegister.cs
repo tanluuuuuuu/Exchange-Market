@@ -44,7 +44,7 @@ namespace Exchange_Market
             {
                 using (StreamWriter sw = File.AppendText(@".\user_data.txt"))
                 {
-                    sw.WriteLine(tb_accName.Text + "," + tb_username.Text + "," + tb_password.Text + ",0,0");
+                    sw.WriteLine(tb_accName.Text + "\t" + tb_username.Text + "\t" + tb_password.Text + "\t0\t0");
                     sw.WriteLine("None");
                     sw.WriteLine("None");
                     sw.WriteLine("None");

@@ -22,10 +22,13 @@ namespace Exchange_Market
         private static User activeUser = null;
 
         private static List<Annoucement> chat = new List<Annoucement>();
+
+        private static List<Annoucement> crypto_comment = new List<Annoucement>();
         public static List<Crypto> Cryptos { get => cryptos; set => cryptos = value; }
         public static List<User> UserList { get => userList; set => userList = value; }
         public static User ActiveUser { get => activeUser; set => activeUser = value; }
         public static List<Annoucement> Chat { get => chat; set => chat = value; }
+        public static List<Annoucement> Crypto_comment { get => crypto_comment; set => crypto_comment = value; }
 
         static Globals()
         {
@@ -94,6 +97,21 @@ namespace Exchange_Market
                 chat.Add(new_annount);
             }
 
+            // Load chat crypto
+            string[] lines_chat_crypto = System.IO.File.ReadAllLines(@".\chat_crypto.txt");
+            foreach (var line in lines_chat_crypto)
+            {
+                if (line == "")
+                    break;
+                String code_name = line.Trim().Split('\t')[0];
+                String userName = line.Trim().Split('\t')[1];
+                String content = line.Trim().Split('\t')[2];
+                DateTime date = DateTime.Parse(line.Trim().Split('\t')[3]);
+
+                Annoucement new_annount = new Annoucement(userName, content, date);
+                int index = cryptos.FindIndex(q => q.code_name == code_name);
+                cryptos[index].comments.Add(new_annount);
+            }
         }
 
         public static void setUpActiveUser(String userName)
@@ -195,6 +213,20 @@ namespace Exchange_Market
                 arrLine.Add(line);
             }
             File.WriteAllLines(@".\chat.txt", arrLine);
+        }
+
+        public static void updateCryptoComment()
+        {
+            List<String> arrLine = new List<String>();
+            foreach (var crt in Cryptos)
+            {
+                foreach(var cm in crt.comments)
+                {
+                    String line = crt.code_name + "\t" + cm.name + "\t" + cm.content + "\t" + cm.date;
+                    arrLine.Add(line);
+                }
+            }
+            File.WriteAllLines(@".\chat_crypto.txt", arrLine);
         }
     }
 }

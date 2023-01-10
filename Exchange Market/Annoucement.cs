@@ -11,11 +11,13 @@ namespace Exchange_Market
         public String name;
         public String content;
         public DateTime date;
-        public Annoucement(String name = "", String content = "", DateTime date = default)
+        public Crypto crt;
+        public Annoucement(String name = "", String content = "", DateTime date = default, Crypto crt = null)
         {
             this.name = name;
             this.content = content;
             this.date = date;
+            this.crt = crt;
         }
     }
 }
