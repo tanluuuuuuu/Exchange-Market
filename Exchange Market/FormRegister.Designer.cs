@@ -38,6 +38,7 @@
             this.tb_accName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_submitRegister = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -84,6 +85,7 @@
             this.tb_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_password.Location = new System.Drawing.Point(218, 114);
             this.tb_password.Name = "tb_password";
+            this.tb_password.PasswordChar = '*';
             this.tb_password.Size = new System.Drawing.Size(255, 30);
             this.tb_password.TabIndex = 4;
             // 
@@ -102,6 +104,7 @@
             this.tb_passwordAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_passwordAgain.Location = new System.Drawing.Point(218, 157);
             this.tb_passwordAgain.Name = "tb_passwordAgain";
+            this.tb_passwordAgain.PasswordChar = '*';
             this.tb_passwordAgain.Size = new System.Drawing.Size(255, 30);
             this.tb_passwordAgain.TabIndex = 6;
             // 
@@ -134,11 +137,23 @@
             this.btn_submitRegister.UseVisualStyleBackColor = true;
             this.btn_submitRegister.Click += new System.EventHandler(this.btn_submitRegister_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(275, 247);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 20);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "Hiển thị mật khẩu";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btn_submitRegister);
             this.Controls.Add(this.tb_accName);
             this.Controls.Add(this.label5);
@@ -169,5 +184,6 @@
         private System.Windows.Forms.TextBox tb_accName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_submitRegister;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
